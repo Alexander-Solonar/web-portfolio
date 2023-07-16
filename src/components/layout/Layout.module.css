@@ -2,27 +2,3 @@
   position: relative;
   overflow: hidden;
 }
-
-.header {
-  position: relative;
-  z-index: 31;
-  text-align: end;
-  padding-top: 20px;
-  padding-bottom: 8px;
-  background: var(--secondary-black-color);
-  /* background: linear-gradient(
-    123deg,
-    var(--secondary-black-color) 0%,
-    var(--primary-black-color) 100%
-  ); */
-}
-
-.header-ligth {
-  background: var(--primary-white-color);
-}
-
-.container {
-  max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 15px;
-}

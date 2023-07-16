@@ -1,9 +1,8 @@
-import icons from "../../assets/icons/icons.svg";
 import { useContext } from "react";
-import clsx from "clsx";
-
-import css from "./ButtonBurger.module.css";
 import { Context } from "../../context/Context";
+import clsx from "clsx";
+import icons from "../../assets/icons/icons.svg";
+import css from "./ButtonBurger.module.css";
 
 const ButtonBurger = () => {
   const { theme } = useContext(Context);

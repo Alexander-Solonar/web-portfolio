@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
-import css from "./Navigation.module.css";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { Context } from "../../context/Context";
+import css from "./Navigation.module.css";
 
 const Navigation = ({ classNameList }) => {
   const { theme } = useContext(Context);

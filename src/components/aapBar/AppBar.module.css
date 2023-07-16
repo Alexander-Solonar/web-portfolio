@@ -5,3 +5,20 @@
   align-items: center;
   width: 100%;
 }
+
+.app-bar {
+  position: relative;
+  z-index: 31;
+  text-align: end;
+  padding-top: 20px;
+  padding-bottom: 8px;
+  background: linear-gradient(
+    123deg,
+    var(--secondary-black-color) 0%,
+    var(--primary-black-color) 100%
+  );
+}
+
+.app-bar-ligth {
+  background: var(--primary-white-color);
+}
