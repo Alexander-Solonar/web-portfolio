@@ -1,0 +1,58 @@
+.switch {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.switch-input {
+  position: relative;
+  width: 45px;
+  height: 20px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--primary-white-color);
+  border-radius: 15px;
+  transition: 250ms;
+}
+
+.switch-input:checked {
+  background: var(--primary-black-color);
+}
+
+.switch-input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: var(--primary-blue-color);
+  transition: 250ms;
+  transform: scale(1.1);
+}
+
+.switch-input:checked:before {
+  left: 25px;
+}
+
+.icon-moon {
+  position: absolute;
+  fill: var(--primary-white-color);
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.icon-sun {
+  position: absolute;
+  fill: var(--primary-black-color);
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
