@@ -1,0 +1,21 @@
+.skills {
+  padding: 113px 0 68px;
+  background: var(--primary-gray-color);
+}
+
+.skills-light {
+  background: var(--third-white-color);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 30px;
+}
+
+.item {
+  width: 270px;
+  height: 270px;
+}

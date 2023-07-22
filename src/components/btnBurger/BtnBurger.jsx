@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import icons from "../../assets/icons/icons.svg";
-import css from "./ButtonBurger.module.css";
+import css from "./BtnBurger.module.css";
 
-const ButtonBurger = () => {
+const BtnBurger = () => {
   const { theme } = useContext(Context);
   const { setIsOpenMenu } = useContext(Context);
 
@@ -16,7 +16,7 @@ const ButtonBurger = () => {
     <button
       className={clsx(
         css["button-burger"],
-        theme && css["button-burger-ligth"]
+        theme && css["button-burger-light"]
       )}
     >
       <svg width="38" height="38" onClick={handleClick}>
@@ -26,4 +26,4 @@ const ButtonBurger = () => {
   );
 };
 
-export default ButtonBurger;
+export default BtnBurger;

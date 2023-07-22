@@ -12,13 +12,9 @@
   text-align: end;
   padding-top: 20px;
   padding-bottom: 8px;
-  background: linear-gradient(
-    123deg,
-    var(--secondary-black-color) 0%,
-    var(--primary-black-color) 100%
-  );
+  background: var(--secondary-black-color) 0%;
 }
 
-.app-bar-ligth {
+.app-bar-light {
   background: var(--primary-white-color);
 }

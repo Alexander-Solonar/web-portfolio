@@ -18,7 +18,7 @@ const MobileMenu = () => {
       className={clsx(
         css.content,
         isOpenMenu && css["is-open"],
-        theme && css["content-ligth"]
+        theme && css["content-light"]
       )}
       onClick={handleClickCloseMenu}
     >

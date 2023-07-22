@@ -1,9 +1,11 @@
-import Hero from "../../components/hero/Hero";
+import SectionHero from "../../components/sectionHero";
+import SectionSkills from "../../components/sectionSkills";
 
 const Home = () => {
   return (
     <>
-      <Hero />
+      <SectionHero />
+      <SectionSkills />
     </>
   );
 };

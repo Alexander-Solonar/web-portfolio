@@ -1,13 +1,15 @@
 import { Context } from "../../context/Context";
 import { useContext } from "react";
 import clsx from "clsx";
-import css from "./Hero.module.css";
+import BtnConnection from "../btnConnection/BtnConnection";
+import image from "../../assets/images/hero-image.png";
+import css from "./SectionHero.module.css";
 
-const Hero = () => {
+const SectionHero = () => {
   const { theme } = useContext(Context);
 
   return (
-    <section className={clsx(css.hero, theme && css["hero-ligth"])}>
+    <section className={clsx(css.hero, theme && css["hero-light"])}>
       <div className="container">
         <div className={css.content}>
           <div className={css["box-desc"]}>
@@ -18,13 +20,12 @@ const Hero = () => {
               a year now. Do you need a website design, site layout, or maybe a
               turnkey website? Then contact me
             </p>
+            <BtnConnection />
           </div>
           <div className={css.decoration}>
-            <code className={css.code}>
-              208 &lt; script&gt; <br /> 209 function myFunction()
-              <br />
-              210 &lt;/script&gt;
-            </code>
+            <div className={css.image}>
+              <img src={image} alt="#" width={320} />
+            </div>
           </div>
         </div>
       </div>
@@ -32,4 +33,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default SectionHero;

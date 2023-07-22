@@ -3,9 +3,9 @@ import { Context } from "../../context/Context";
 import throttle from "lodash.throttle";
 import clsx from "clsx";
 import Logo from "../logo";
-import Navigation from "../navigation/Navigation";
-import ButtonBurger from "../buttonBurger/ButtonBurger";
-import ButtonTheme from "../buttonTheme/ButtonTheme";
+import Navigation from "../navigation";
+import BtnBurger from "../btnBurger";
+import BtnTheme from "../btnTheme";
 import css from "./AppBar.module.css";
 
 const AppBar = () => {
@@ -27,13 +27,13 @@ const AppBar = () => {
   }, [setIsOpenMenu]);
 
   return (
-    <div className={clsx(css["app-bar"], theme && css["app-bar-ligth"])}>
+    <div className={clsx(css["app-bar"], theme && css["app-bar-light"])}>
       <div className="container">
         <div className={css.content}>
           <Logo />
           {windowWidth > 767 && <Navigation classNameList={"list"} />}
-          {windowWidth < 768 && <ButtonBurger />}
-          <ButtonTheme />
+          {windowWidth < 768 && <BtnBurger />}
+          <BtnTheme />
         </div>
       </div>
     </div>
