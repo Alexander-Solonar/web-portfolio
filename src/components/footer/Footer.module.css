@@ -1,0 +1,15 @@
+.footer {
+  padding: 50px 0;
+  background: var(--primary-gray-color);
+}
+
+.footer-light {
+  background: var(--third-white-color);
+}
+
+.content {
+  max-width: 820px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}

@@ -8,8 +8,8 @@ const Navigation = ({ classNameList }) => {
 
   const linkClassName = ({ isActive }) => {
     const darkTheme = isActive ? css.active : css.link;
-    const ligthTheme = isActive ? css.activeLigth : css.linkLigth;
-    return !theme ? darkTheme : ligthTheme;
+    const lightTheme = isActive ? css.activeLight : css.linkLight;
+    return !theme ? darkTheme : lightTheme;
   };
 
   return (

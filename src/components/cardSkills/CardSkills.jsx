@@ -1,10 +1,10 @@
-import icons from "../../assets/icons/icons.svg";
-import clsx from "clsx";
-import css from "./CardSkils.module.css";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import clsx from "clsx";
+import icons from "../../assets/icons/icons.svg";
+import css from "./CardSkills.module.css";
 
-const CardSkils = ({ data }) => {
+const CardSkills = ({ data }) => {
   const { theme } = useContext(Context);
   const { tag, name, description } = data;
 
@@ -25,4 +25,4 @@ const CardSkils = ({ data }) => {
   );
 };
 
-export default CardSkils;
+export default CardSkills;

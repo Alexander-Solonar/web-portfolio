@@ -1,20 +1,29 @@
 .content {
   overflow: hidden;
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 .app-bar {
   position: relative;
-  z-index: 31;
+  z-index: 1;
   text-align: end;
-  padding-top: 20px;
-  padding-bottom: 8px;
+  padding-top: 13px;
+  padding-bottom: 5px;
   background: var(--secondary-black-color) 0%;
 }
 
 .app-bar-light {
   background: var(--primary-white-color);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  max-width: 596px;
 }

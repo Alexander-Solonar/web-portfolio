@@ -1,4 +1,4 @@
 .logo {
-  display: block;
-  margin-right: auto;
+  display: flex;
+  fill: var(--primary-blue-color);
 }

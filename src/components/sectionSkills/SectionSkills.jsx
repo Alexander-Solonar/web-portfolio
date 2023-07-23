@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { Context } from "../../context/Context";
-import clsx from "clsx";
+import { useEffect, useState } from "react";
 import css from "./SectionSkills.module.css";
 import * as API from "../../services/API";
-import CardSkils from "../cardSkills";
+import CardSkills from "../cardSkills";
 
 const SectionSkills = () => {
   const [data, setData] = useState([]);
-  const { theme } = useContext(Context);
 
   useEffect(() => {
     (async () => {
@@ -21,12 +18,12 @@ const SectionSkills = () => {
   }, []);
 
   return (
-    <section className={clsx(css.skills, theme && css["skills-light"])}>
+    <section className={css.skills}>
       <div className="container">
         <ul className={css.list}>
           {data.map((element) => (
             <li key={element.id} className={css.item}>
-              <CardSkils data={element} />
+              <CardSkills data={element} />
             </li>
           ))}
         </ul>

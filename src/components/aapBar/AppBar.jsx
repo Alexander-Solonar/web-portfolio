@@ -19,7 +19,7 @@ const AppBar = () => {
       if (window.innerWidth > 767) {
         setIsOpenMenu(false);
       }
-    }, 500);
+    }, 250);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -31,9 +31,11 @@ const AppBar = () => {
       <div className="container">
         <div className={css.content}>
           <Logo />
-          {windowWidth > 767 && <Navigation classNameList={"list"} />}
-          {windowWidth < 768 && <BtnBurger />}
-          <BtnTheme />
+          <div className={css.box}>
+            {windowWidth > 767 && <Navigation classNameList={"list"} />}
+            {windowWidth < 768 && <BtnBurger />}
+            <BtnTheme />
+          </div>
         </div>
       </div>
     </div>
