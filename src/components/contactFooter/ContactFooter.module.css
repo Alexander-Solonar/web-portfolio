@@ -1,0 +1,20 @@
+.block-contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.item {
+  display: flex;
+  column-gap: 5px;
+}
+
+.item a {
+  color: inherit;
+}

@@ -4,6 +4,7 @@ import { Context } from "../../context/Context";
 import Navigation from "../navigation/Navigation";
 import clsx from "clsx";
 import Logo from "../logo/Logo";
+import ContactFooter from "../contactFooter/ContactFooter";
 
 const Footer = () => {
   const { theme } = useContext(Context);
@@ -13,7 +14,11 @@ const Footer = () => {
       <div className="container">
         <div className={css.content}>
           <Navigation classNameList={"list-footer"} />
-          <Logo />
+          <ContactFooter />
+          <div className={css["box-copyright"]}>
+            <Logo />
+            <p>Copyright &#169; 2023, Solonar O.</p>
+          </div>
         </div>
       </div>
     </footer>

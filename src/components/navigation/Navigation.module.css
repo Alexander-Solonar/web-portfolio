@@ -1,10 +1,11 @@
 .nav {
-  width: 100%;
+  /* flex: 1; */
 }
 
 .list {
   display: flex;
   justify-content: space-between;
+  column-gap: 50px;
   padding: 0 60px;
 }
 
@@ -25,6 +26,7 @@
 .link,
 .active {
   position: relative;
+  white-space: nowrap;
   color: var(--primary-white-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

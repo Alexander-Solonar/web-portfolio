@@ -19,7 +19,7 @@ const BtnBurger = () => {
         theme && css["button-burger-light"]
       )}
     >
-      <svg width="38" height="38" onClick={handleClick}>
+      <svg width="50" height="34" onClick={handleClick}>
         <use href={`${icons}#icon-menu`} />
       </svg>
     </button>

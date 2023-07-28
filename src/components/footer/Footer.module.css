@@ -8,8 +8,18 @@
 }
 
 .content {
-  max-width: 820px;
+  max-width: 715px;
   display: flex;
-  justify-content: space-between;
+  padding: 0 30px;
+  flex-wrap: wrap;
   margin: 0 auto;
+  column-gap: 115px;
+  row-gap: 28px;
+}
+
+.box-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 18px;
 }
