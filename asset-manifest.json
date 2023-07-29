@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.cb04f655.css",
-    "main.js": "/web-portfolio/static/js/main.25e9b133.js",
-    "static/media/icons.svg": "/web-portfolio/static/media/icons.dcf68ad44e7d0106df7fc4059cca929d.svg",
+    "main.css": "/web-portfolio/static/css/main.269f6eb1.css",
+    "main.js": "/web-portfolio/static/js/main.884b4360.js",
+    "static/media/icons.svg": "/web-portfolio/static/media/icons.867fa9217778616650d79576253abcd8.svg",
     "static/media/roboto-v30-latin-300.woff": "/web-portfolio/static/media/roboto-v30-latin-300.c2f7ab22cb9cbd074c3a.woff",
     "static/media/roboto-v30-latin-regular.woff": "/web-portfolio/static/media/roboto-v30-latin-regular.f1e2a76794cb86b2aa8e.woff",
     "static/media/roboto-v30-latin-regular.woff2": "/web-portfolio/static/media/roboto-v30-latin-regular.b009a76ad6afe4ebd301.woff2",
     "static/media/roboto-v30-latin-300.woff2": "/web-portfolio/static/media/roboto-v30-latin-300.c48fb6765a9fcb00b330.woff2",
     "static/media/hero-image.png": "/web-portfolio/static/media/hero-image.edbabc3933d6506b9243.png",
     "index.html": "/web-portfolio/index.html",
-    "main.cb04f655.css.map": "/web-portfolio/static/css/main.cb04f655.css.map",
-    "main.25e9b133.js.map": "/web-portfolio/static/js/main.25e9b133.js.map"
+    "main.269f6eb1.css.map": "/web-portfolio/static/css/main.269f6eb1.css.map",
+    "main.884b4360.js.map": "/web-portfolio/static/js/main.884b4360.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb04f655.css",
-    "static/js/main.25e9b133.js"
+    "static/css/main.269f6eb1.css",
+    "static/js/main.884b4360.js"
   ]
 }
