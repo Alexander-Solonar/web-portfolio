@@ -6,9 +6,4 @@
 
 .main {
   flex: 1 1 auto;
-  background: var(--primary-gray-color);
-}
-
-.main-light {
-  background: var(--third-white-color);
 }

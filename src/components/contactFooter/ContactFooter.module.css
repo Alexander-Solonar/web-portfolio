@@ -7,7 +7,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  row-gap: 18px;
+  row-gap: 12px;
 }
 
 .item {
@@ -15,6 +15,17 @@
   column-gap: 5px;
 }
 
-.item a {
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   color: inherit;
+  fill: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: var(--primary-blue-color);
+  fill: var(--primary-blue-color);
 }

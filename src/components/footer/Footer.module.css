@@ -1,20 +1,25 @@
 .footer {
   padding: 50px 0;
+  color: var(--primary-white-color);
+  fill: var(--primary-white-color);
   background: var(--primary-gray-color);
 }
 
 .footer-light {
   background: var(--third-white-color);
+  color: var(--primary-black-color);
+  fill: var(--primary-black-color);
 }
 
 .content {
-  max-width: 715px;
+  max-width: 810px;
   display: flex;
-  padding: 0 30px;
+  justify-content: space-around;
+  flex: 1;
   flex-wrap: wrap;
   margin: 0 auto;
-  column-gap: 115px;
-  row-gap: 28px;
+  column-gap: 35px;
+  row-gap: 48px;
 }
 
 .box-copyright {

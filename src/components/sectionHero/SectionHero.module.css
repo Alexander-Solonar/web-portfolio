@@ -1,5 +1,6 @@
 .hero {
   padding: 40px 0;
+  color: var(--primary-white-color);
   background: var(--secondary-black-color);
 }
 

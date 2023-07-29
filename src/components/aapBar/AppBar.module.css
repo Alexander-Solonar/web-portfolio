@@ -12,10 +12,17 @@
   text-align: end;
   padding-top: 13px;
   padding-bottom: 5px;
+
+  color: var(--primary-white-color);
+  fill: var(--primary-white-color);
+
   background: var(--secondary-black-color) 0%;
 }
 
 .app-bar-light {
+  color: var(--primary-black-color);
+  fill: var(--primary-black-color);
+
   background: var(--primary-white-color);
 }
 

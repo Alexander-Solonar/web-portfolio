@@ -1,15 +1,10 @@
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { Context } from "../../context/Context";
 import css from "./Navigation.module.css";
 
 const Navigation = ({ classNameList }) => {
-  const { theme } = useContext(Context);
-
   const linkClassName = ({ isActive }) => {
-    const darkTheme = isActive ? css.active : css.link;
-    const lightTheme = isActive ? css.activeLight : css.linkLight;
-    return !theme ? darkTheme : lightTheme;
+    const className = isActive ? css.active : css.link;
+    return className;
   };
 
   return (

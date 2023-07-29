@@ -20,11 +20,46 @@ body {
   font-weight: 300;
   height: 100%;
   margin: 0;
-  color: var(--primary-white-color);
 }
 
 #root {
   height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h1,
@@ -32,24 +67,9 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
-  margin: 0;
-}
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .container {

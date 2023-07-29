@@ -8,6 +8,7 @@
   border-radius: 29px;
   transition: transform 0.8s ease 0s;
   transform-style: preserve-3d;
+  color: var(--primary-white-color);
   background: var(--secondary-black-color);
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
 }

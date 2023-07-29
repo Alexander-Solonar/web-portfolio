@@ -1,5 +1,10 @@
 .skills {
   padding: 113px 0 68px;
+  background: var(--primary-gray-color);
+}
+
+.skills-light {
+  background: var(--third-white-color);
 }
 
 .list {
