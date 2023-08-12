@@ -1,12 +1,12 @@
 .hero {
   padding: 40px 0;
   color: var(--primary-white-color);
-  background: var(--secondary-black-color);
+  background-color: var(--secondary-black-color);
 }
 
 .hero-light {
   color: var(--primary-black-color);
-  background: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 }
 
 .content {

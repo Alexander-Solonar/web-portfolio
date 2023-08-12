@@ -1,5 +1,5 @@
-import { Context } from "../../context/Context";
 import { useContext } from "react";
+import { Context } from "../../context/Context";
 import clsx from "clsx";
 import BtnConnection from "../btnConnection/BtnConnection";
 import image from "../../assets/images/hero-image.png";
