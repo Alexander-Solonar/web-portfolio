@@ -1,24 +1,34 @@
 .hero {
   padding: 40px 0;
   color: var(--primary-white-color);
-  background-color: var(--secondary-black-color);
+  background-image: linear-gradient(
+    123deg,
+    var(--primary-black-color) 0%,
+    var(--secondary-black-color) 100%
+  );
 }
 
 .hero-light {
   color: var(--primary-black-color);
-  background-color: var(--primary-white-color);
+  background-image: linear-gradient(
+    123deg,
+    var(--secondary-white-color) 0%,
+    var(--primary-white-color) 100%
+  );
 }
 
 .content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 20px;
   row-gap: 50px;
   padding: 75px 0;
+  overflow: hidden;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .content {
     padding: 45px 0;
   }
@@ -32,13 +42,15 @@
 }
 
 .box-desc {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   max-width: 447px;
+  z-index: 5;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .box-desc {
     max-width: 350px;
   }
@@ -59,7 +71,7 @@
   font-weight: 700;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .title {
     font-size: 52px;
   }
@@ -72,7 +84,7 @@
   line-height: 1.32;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .text {
     font-size: 14px;
   }
@@ -83,45 +95,10 @@
   font-weight: 600;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .sub-title {
     font-size: 28px;
   }
-}
-
-.decoration {
-  position: relative;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 525px;
-  height: 525px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 67px solid var(--blu, var(--primary-blue-color));
-  box-shadow: 0px 0px 122px 0px rgba(0, 196, 240, 0.42);
-}
-
-@media (max-width: 1023px) {
-  .decoration {
-    max-width: 450px;
-    height: 450px;
-  }
-}
-
-@media (max-width: 504px) {
-  .decoration {
-    display: none;
-  }
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .image {
@@ -129,5 +106,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 1000px;
+  left: 300px;
+
+  @media (max-width: 425px) {
+    left: 200px;
+  }
 }

@@ -13,7 +13,7 @@ const SectionHero = () => {
       <div className="container">
         <div className={css.content}>
           <div className={css["box-desc"]}>
-            <h3 className={css["sub-title"]}>Hello</h3>
+            <h3 className={css["sub-title"]}>Hi</h3>
             <h1 className={css.title}>I’m Oleksandr Solonar</h1>
             <p className={css.text}>
               I've been doing web design, front-end and back-end development for
@@ -22,10 +22,8 @@ const SectionHero = () => {
             </p>
             <BtnConnection />
           </div>
-          <div className={css.decoration}>
-            <div className={css.image}>
-              <img src={image} alt="#" width={320} />
-            </div>
+          <div className={css.image}>
+            <img src={image} alt="#" width={1000} />
           </div>
         </div>
       </div>

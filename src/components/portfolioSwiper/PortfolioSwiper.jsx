@@ -1,3 +1,7 @@
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Context } from "../../context/Context";
+import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import * as APIFirebase from "../../services/APIFirebase";
@@ -5,10 +9,9 @@ import arrowLeft from "../../assets/icons/icons.svg";
 import arrowRight from "../../assets/icons/icons.svg";
 import "swiper/css";
 import css from "./PortfolioSwiper.module.css";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const PortfolioSwiper = () => {
+  const { theme } = useContext(Context);
   const [myProjects, setMyProjects] = useState([]);
 
   useEffect(() => {
@@ -35,8 +38,13 @@ const PortfolioSwiper = () => {
     >
       {myProjects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
-          <div className={css.content}>
-            <img className={css.image} src={image} alt="" width={500} />
+          <div className={clsx(css.content, theme && css["content-light"])}>
+            <img
+              className={css.image}
+              src={image}
+              alt={`${name} site preview`}
+              width={500}
+            />
 
             <div className={css.desc}>
               <h3 className={css.title}>{name}</h3>

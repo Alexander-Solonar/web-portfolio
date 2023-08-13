@@ -1,10 +1,18 @@
 .skills {
   padding: 113px 0 68px;
-  background: var(--primary-gray-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--secondary-black-color) 0%,
+    var(--primary-gray-color) 100%
+  );
 }
 
 .skills-light {
-  background: var(--third-white-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--third-white-color) 0%,
+    var(--secondary-white-color) 100%
+  );
 }
 
 .list {
