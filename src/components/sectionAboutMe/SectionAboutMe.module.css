@@ -1,4 +1,5 @@
 .aboutMe {
+  min-height: 1096px;
   background-image: linear-gradient(
     90deg,
     var(--secondary-black-color) 0%,
@@ -142,6 +143,7 @@
 
 .text {
   position: relative;
+  height: 823px;
   padding: 63px;
   border-radius: 14px;
   font-size: 20px;

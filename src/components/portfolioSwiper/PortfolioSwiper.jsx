@@ -39,12 +39,14 @@ const PortfolioSwiper = () => {
       {myProjects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
           <div className={clsx(css.content, theme && css["content-light"])}>
-            <img
-              className={css.image}
-              src={image}
-              alt={`${name} site preview`}
-              width={500}
-            />
+            <div>
+              <img
+                className={css.image}
+                src={image}
+                alt={`${name} site preview`}
+                width={500}
+              />
+            </div>
 
             <div className={css.desc}>
               <h3 className={css.title}>{name}</h3>
