@@ -3,7 +3,6 @@ import { Context } from "../../context/Context";
 import clsx from "clsx";
 import css from "./SectionSummary.module.css";
 import cv from "../../assets/images/cv-image.jpg";
-import res from "../../assets/Oleksandr_Solonar_Front-end Developer.pdf";
 
 const SectionSummary = () => {
   const { theme } = useContext(Context);
