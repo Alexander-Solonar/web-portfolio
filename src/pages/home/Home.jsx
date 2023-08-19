@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <>
       <SectionHero />
-      <SectionAboutMe />
       <SectionSkills />
+      <SectionAboutMe />
       <SectionPortfolio />
     </>
   );

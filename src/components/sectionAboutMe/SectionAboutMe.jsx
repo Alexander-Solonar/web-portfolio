@@ -1,34 +1,55 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
+import { motion } from "framer-motion";
 import home from "../../assets/images/home.jpg";
 import walk from "../../assets/images/walk.jpg";
 import sport from "../../assets/images/sport.jpg";
 import css from "./SectionAboutMe.module.css";
 
+const animation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    opacity: 1,
+    transition: { delay: custom * 0.3 },
+  }),
+};
+
 const SectionAboutMe = () => {
   const { theme } = useContext(Context);
 
   return (
-    <div className={clsx(css.aboutMe, theme && css["aboutMe-light"])}>
+    <section className={clsx(css.aboutMe, theme && css["aboutMe-light"])}>
       <div className={css.content}>
         <div className={css["box-left-img"]}>
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.4, once: true }}
+            custom={1}
+            variants={animation}
             className={clsx(
               css["left-top-img"],
               theme && css["left-top-img-light"]
             )}
           >
             <img src={home} alt="man" width={284} />
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.9, once: true }}
+            custom={1}
+            variants={animation}
             className={clsx(
               css["left-bottom-img"],
               theme && css["left-bottom-img-light"]
             )}
           >
             <img src={sport} alt="man" width={262} />
-          </div>
+          </motion.div>
         </div>
         <div className={clsx(css["box-desc"], theme && css["box-desc-light"])}>
           <h2 className={css.title}>About me</h2>
@@ -52,14 +73,19 @@ const SectionAboutMe = () => {
           </p>
         </div>
         <div className={css["box-right-img"]}>
-          <div
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.7, once: true }}
+            custom={1}
+            variants={animation}
             className={clsx(css["right-img"], theme && css["right-img-light"])}
           >
             <img src={walk} alt="man" width={299} />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import BtnConnection from "../btnConnection/BtnConnection";
-import image from "../../assets/images/hero-image1.png";
+import image from "../../assets/images/hero-image.png";
 import css from "./SectionHero.module.css";
 
 const SectionHero = () => {

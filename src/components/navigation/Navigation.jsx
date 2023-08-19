@@ -15,11 +15,7 @@ const Navigation = ({ classNameList }) => {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink className={linkClassName} to="/about-me">
-            About me
-          </NavLink>
-        </li>
+
         <li>
           <NavLink className={linkClassName} to="/portfolio">
             Portfolio
@@ -28,6 +24,11 @@ const Navigation = ({ classNameList }) => {
         <li>
           <NavLink className={linkClassName} to="/contact">
             Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className={linkClassName} to="/my-summary">
+            My Summary
           </NavLink>
         </li>
       </ul>
