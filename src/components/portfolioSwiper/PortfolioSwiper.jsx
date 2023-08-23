@@ -8,7 +8,7 @@ import * as APIFirebase from "../../services/APIFirebase";
 import arrowLeft from "../../assets/icons/icons.svg";
 import arrowRight from "../../assets/icons/icons.svg";
 import "swiper/css";
-import css from "./PortfolioSwiper.module.css";
+import css from "./PortfolioSwiper.module.scss";
 
 const PortfolioSwiper = () => {
   const { theme } = useContext(Context);

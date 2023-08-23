@@ -6,7 +6,7 @@ import Logo from "../logo";
 import Navigation from "../navigation";
 import BtnBurger from "../btnBurger";
 import BtnTheme from "../btnTheme";
-import css from "./AppBar.module.css";
+import css from "./AppBar.module.scss";
 
 const AppBar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

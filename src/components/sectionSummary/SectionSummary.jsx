@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import cv from "../../assets/images/cv-image.jpg";
-import css from "./SectionSummary.module.css";
+import css from "./SectionSummary.module.scss";
 
 const SectionSummary = () => {
   const { theme } = useContext(Context);

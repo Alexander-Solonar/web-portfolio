@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import css from "./Navigation.module.css";
+import css from "./Navigation.module.scss";
 
 const Navigation = ({ classNameList }) => {
   const linkClassName = ({ isActive }) => {

@@ -1,4 +1,4 @@
-import css from "./BtnConnection.module.css";
+import css from "./BtnConnection.module.scss";
 
 const BtnConnection = () => {
   return <button className={css.button}>Contact me</button>;

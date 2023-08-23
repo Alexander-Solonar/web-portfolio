@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import PortfolioSwiper from "../portfolioSwiper/";
-import css from "./SectionPortfolio.module.css";
+import css from "./SectionPortfolio.module.scss";
 
 const SectionPortfolio = () => {
   const { theme } = useContext(Context);

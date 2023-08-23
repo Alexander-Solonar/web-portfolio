@@ -21,10 +21,6 @@
   }
 }
 
-.is-open {
-  transform: translateY(0);
-}
-
 .content-light {
   color: var(--primary-black-color);
   fill: var(--primary-black-color);
@@ -34,4 +30,8 @@
     var(--secondary-white-color) 0%,
     var(--primary-white-color) 100%
   );
+}
+
+.is-open {
+  transform: translateY(0);
 }

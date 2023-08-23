@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import Navigation from "../navigation/Navigation";
-import css from "./MobileMenu.module.css";
+import css from "./MobileMenu.module.scss";
 
 const MobileMenu = () => {
   const { theme } = useContext(Context);

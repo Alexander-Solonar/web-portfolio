@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import icons from "../../assets/icons/icons.svg";
-import css from "./BtnBurger.module.css";
+import css from "./BtnBurger.module.scss";
 
 const BtnBurger = () => {
   const { setIsOpenMenu } = useContext(Context);

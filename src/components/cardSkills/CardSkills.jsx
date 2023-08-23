@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import icons from "../../assets/icons/icons.svg";
-import css from "./CardSkills.module.css";
+import css from "./CardSkills.module.scss";
 
 const CardSkills = ({ data }) => {
   const { theme } = useContext(Context);

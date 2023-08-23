@@ -45,8 +45,8 @@
   padding: 6px 15px;
   color: inherit;
   background-color: var(--secondary-yellow-color);
-}
 
-.link:hover {
-  background-color: var(--primary-yellow-color);
+  &:hover {
+    background-color: var(--primary-yellow-color);
+  }
 }

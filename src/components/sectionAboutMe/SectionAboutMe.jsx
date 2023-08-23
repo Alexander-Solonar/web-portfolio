@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import home from "../../assets/images/home.jpg";
 import walk from "../../assets/images/walk.jpg";
 import sport from "../../assets/images/sport.jpg";
-import css from "./SectionAboutMe.module.css";
+import css from "./SectionAboutMe.module.scss";
 
 const animation = {
   hidden: {

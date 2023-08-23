@@ -3,7 +3,7 @@ import { Context } from "../../context/Context";
 import clsx from "clsx";
 import BtnConnection from "../btnConnection/BtnConnection";
 import image from "../../assets/images/hero-image.png";
-import css from "./SectionHero.module.css";
+import css from "./SectionHero.module.scss";
 
 const SectionHero = () => {
   const { theme } = useContext(Context);

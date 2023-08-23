@@ -1,5 +1,5 @@
 import icons from "../../assets/icons/icons.svg";
-import css from "./ContactFooter.module.css";
+import css from "./ContactFooter.module.scss";
 
 const ContactFooter = () => {
   return (

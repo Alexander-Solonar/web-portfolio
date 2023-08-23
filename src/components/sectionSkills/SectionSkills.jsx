@@ -3,7 +3,7 @@ import { Context } from "../../context/Context";
 import clsx from "clsx";
 import * as API from "../../services/API";
 import CardSkills from "../cardSkills";
-import css from "./SectionSkills.module.css";
+import css from "./SectionSkills.module.scss";
 
 const SectionSkills = () => {
   const { theme } = useContext(Context);

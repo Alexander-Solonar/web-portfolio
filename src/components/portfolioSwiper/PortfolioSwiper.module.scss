@@ -80,11 +80,11 @@
   line-height: normal;
   color: var(--secondary-yellow-color);
 
+  &:hover {
+    color: var(--primary-yellow-color);
+  }
+
   @media screen and (max-width: 425px) {
     font-size: 14px;
   }
-}
-
-.link:hover {
-  color: var(--primary-yellow-color);
 }

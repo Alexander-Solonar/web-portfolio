@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import icons from "../../assets/icons/icons.svg";
-import css from "./BtnTheme.module.css";
+import css from "./BtnTheme.module.scss";
 
 const BtnTheme = () => {
   const { setTheme } = useContext(Context);

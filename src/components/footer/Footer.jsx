@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import css from "./Footer.module.css";
 import { Context } from "../../context/Context";
 import Navigation from "../navigation/Navigation";
 import clsx from "clsx";
 import Logo from "../logo/Logo";
 import ContactFooter from "../contactFooter/ContactFooter";
+import css from "./Footer.module.scss";
 
 const Footer = () => {
   const { theme } = useContext(Context);
