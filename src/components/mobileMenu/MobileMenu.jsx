@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import Navigation from "../navigation/Navigation";
-import css from "./MobileMenu.module.scss";
+import scss from "./MobileMenu.module.scss";
 
 const MobileMenu = () => {
   const { theme } = useContext(Context);
@@ -16,9 +16,9 @@ const MobileMenu = () => {
   return (
     <div
       className={clsx(
-        css.content,
-        isOpenMenu && css["is-open"],
-        theme && css["content-light"]
+        scss.content,
+        isOpenMenu && scss["is-open"],
+        theme && scss["content-light"]
       )}
       onClick={handleClickCloseMenu}
     >

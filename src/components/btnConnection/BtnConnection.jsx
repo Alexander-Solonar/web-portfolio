@@ -1,7 +1,7 @@
-import css from "./BtnConnection.module.scss";
+import scss from "./BtnConnection.module.scss";
 
 const BtnConnection = () => {
-  return <button className={css.button}>Contact me</button>;
+  return <button className={scss.button}>Contact me</button>;
 };
 
 export default BtnConnection;

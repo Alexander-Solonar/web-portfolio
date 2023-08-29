@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import home from "../../assets/images/home.jpg";
 import walk from "../../assets/images/walk.jpg";
 import sport from "../../assets/images/sport.jpg";
-import css from "./SectionAboutMe.module.scss";
+import scss from "./SectionAboutMe.module.scss";
 
 const animation = {
   hidden: {
@@ -21,9 +21,9 @@ const SectionAboutMe = () => {
   const { theme } = useContext(Context);
 
   return (
-    <section className={clsx(css.aboutMe, theme && css["aboutMe-light"])}>
-      <div className={css.content}>
-        <div className={css["box-left-img"]}>
+    <section className={clsx(scss.aboutMe, theme && scss["aboutMe-light"])}>
+      <div className={scss.content}>
+        <div className={scss["box-left-img"]}>
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -31,8 +31,8 @@ const SectionAboutMe = () => {
             custom={1}
             variants={animation}
             className={clsx(
-              css["left-top-img"],
-              theme && css["left-top-img-light"]
+              scss["left-top-img"],
+              theme && scss["left-top-img-light"]
             )}
           >
             <img src={home} alt="man" width={284} />
@@ -44,16 +44,18 @@ const SectionAboutMe = () => {
             custom={1}
             variants={animation}
             className={clsx(
-              css["left-bottom-img"],
-              theme && css["left-bottom-img-light"]
+              scss["left-bottom-img"],
+              theme && scss["left-bottom-img-light"]
             )}
           >
             <img src={sport} alt="man" width={262} />
           </motion.div>
         </div>
-        <div className={clsx(css["box-desc"], theme && css["box-desc-light"])}>
-          <h2 className={css.title}>About me</h2>
-          <p className={clsx(css.text, theme && css["text-light"])}>
+        <div
+          className={clsx(scss["box-desc"], theme && scss["box-desc-light"])}
+        >
+          <h2 className={scss.title}>About me</h2>
+          <p className={clsx(scss.text, theme && scss["text-light"])}>
             Hello again everyone! So, you already know that my name is
             Oleksandr. A little about myself: student, 18 y.o., athlete-football
             player, I love creativity since childhood, I live in Donetsk,
@@ -72,14 +74,17 @@ const SectionAboutMe = () => {
             contacts below.
           </p>
         </div>
-        <div className={css["box-right-img"]}>
+        <div className={scss["box-right-img"]}>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.7, once: true }}
             custom={1}
             variants={animation}
-            className={clsx(css["right-img"], theme && css["right-img-light"])}
+            className={clsx(
+              scss["right-img"],
+              theme && scss["right-img-light"]
+            )}
           >
             <img src={walk} alt="man" width={299} />
           </motion.div>

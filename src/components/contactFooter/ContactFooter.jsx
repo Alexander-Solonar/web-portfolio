@@ -1,14 +1,14 @@
 import icons from "../../assets/icons/icons.svg";
-import css from "./ContactFooter.module.scss";
+import scss from "./ContactFooter.module.scss";
 
 const ContactFooter = () => {
   return (
-    <div className={css["block-contact"]}>
+    <div className={scss["block-contact"]}>
       <p>Contact</p>
-      <ul className={css.list}>
-        <li className={css.item}>
+      <ul className={scss.list}>
+        <li className={scss.item}>
           <a
-            className={css.link}
+            className={scss.link}
             href="mailto: solo991@ukr.net"
             target="_blank"
             rel="noopener noreferrer nofollow"
@@ -19,9 +19,9 @@ const ContactFooter = () => {
             <span>solo991@ukr.net</span>
           </a>
         </li>
-        <li className={css.item}>
+        <li className={scss.item}>
           <a
-            className={css.link}
+            className={scss.link}
             href="https://t.me/alexander_solonar"
             target="_blank"
             rel="noopener noreferrer nofollow"
@@ -32,8 +32,8 @@ const ContactFooter = () => {
             <span>alexander_solonar</span>
           </a>
         </li>
-        <li className={css.item}>
-          <a className={css.link} href="tel:+380689441877">
+        <li className={scss.item}>
+          <a className={scss.link} href="tel:+380689441877">
             <svg width={22} height={22}>
               <use href={`${icons}#icon-phone`} />
             </svg>

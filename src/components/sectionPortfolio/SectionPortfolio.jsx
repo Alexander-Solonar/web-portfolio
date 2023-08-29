@@ -2,15 +2,15 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import PortfolioSwiper from "../portfolioSwiper/";
-import css from "./SectionPortfolio.module.scss";
+import scss from "./SectionPortfolio.module.scss";
 
 const SectionPortfolio = () => {
   const { theme } = useContext(Context);
 
   return (
-    <section className={clsx(css.portfolio, theme && css["portfolio-light"])}>
+    <section className={clsx(scss.portfolio, theme && scss["portfolio-light"])}>
       <div className="container">
-        <h2 className={css.title}>Portfolio</h2>
+        <h2 className={scss.title}>Portfolio</h2>
         <PortfolioSwiper />
       </div>
     </section>

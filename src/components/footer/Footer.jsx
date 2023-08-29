@@ -4,20 +4,21 @@ import Navigation from "../navigation/Navigation";
 import clsx from "clsx";
 import Logo from "../logo/Logo";
 import ContactFooter from "../contactFooter/ContactFooter";
-import css from "./Footer.module.scss";
+import scss from "./Footer.module.scss";
 
 const Footer = () => {
   const { theme } = useContext(Context);
 
   return (
-    <footer className={clsx(css.footer, theme && css["footer-light"])}>
+    <footer className={clsx(scss.footer, theme && scss["footer-light"])}>
       <div className="container">
-        <div className={css.content}>
+        <div className={scss.content}>
           <Navigation classNameList={"list-footer"} />
           <ContactFooter />
-          <div className={css["box-copyright"]}>
+          <div className={scss["box-copyright"]}>
             <Logo />
-            <p>Copyright &#169; 2023, Solonar O.</p>
+            <p> Odessa, Ukraine</p>
+            <p> &#169; 2023, Solonar Oleksandr</p>
           </div>
         </div>
       </div>

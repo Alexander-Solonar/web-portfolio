@@ -3,7 +3,7 @@ import { Context } from "../../context/Context";
 import clsx from "clsx";
 import * as API from "../../services/API";
 import CardSkills from "../cardSkills";
-import css from "./SectionSkills.module.scss";
+import scss from "./SectionSkills.module.scss";
 
 const SectionSkills = () => {
   const { theme } = useContext(Context);
@@ -21,12 +21,12 @@ const SectionSkills = () => {
   }, []);
 
   return (
-    <section className={clsx(css.skills, theme && css["skills-light"])}>
+    <section className={clsx(scss.skills, theme && scss["skills-light"])}>
       <div className="container">
-        <h2 className={css.title}>Skills</h2>
-        <ul className={css.list}>
+        <h2 className={scss.title}>Skills</h2>
+        <ul className={scss.list}>
           {data.map((element) => (
-            <li key={element.id} className={css.item}>
+            <li key={element.id} className={scss.item}>
               <CardSkills data={element} />
             </li>
           ))}

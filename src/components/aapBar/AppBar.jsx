@@ -6,7 +6,7 @@ import Logo from "../logo";
 import Navigation from "../navigation";
 import BtnBurger from "../btnBurger";
 import BtnTheme from "../btnTheme";
-import css from "./AppBar.module.scss";
+import scss from "./AppBar.module.scss";
 
 const AppBar = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -27,11 +27,11 @@ const AppBar = () => {
   }, [setIsOpenMenu]);
 
   return (
-    <div className={clsx(css["app-bar"], theme && css["app-bar-light"])}>
+    <div className={clsx(scss["app-bar"], theme && scss["app-bar-light"])}>
       <div className="container">
-        <div className={css.content}>
+        <div className={scss.content}>
           <Logo />
-          <div className={css.box}>
+          <div className={scss.box}>
             {windowWidth > 767 && <Navigation classNameList={"list"} />}
             {windowWidth < 768 && <BtnBurger />}
             <BtnTheme />

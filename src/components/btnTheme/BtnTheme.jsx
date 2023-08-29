@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import icons from "../../assets/icons/icons.svg";
-import css from "./BtnTheme.module.scss";
+import scss from "./BtnTheme.module.scss";
 
 const BtnTheme = () => {
   const { setTheme } = useContext(Context);
@@ -12,17 +12,17 @@ const BtnTheme = () => {
   };
 
   return (
-    <label className={css.switch}>
-      <svg className={css["icon-moon"]} width="16" height="16">
+    <label className={scss.switch}>
+      <svg className={scss["icon-moon"]} width="16" height="16">
         <use href={`${icons}#icon-moon`}></use>
       </svg>
       <input
         type="checkbox"
         checked={theme}
-        className={css["switch-input"]}
+        className={scss["switch-input"]}
         onChange={handleCheckboxChange}
       />
-      <svg className={css["icon-sun"]} width="16" height="16">
+      <svg className={scss["icon-sun"]} width="16" height="16">
         <use href={`${icons}#icon-sun`}></use>
       </svg>
     </label>

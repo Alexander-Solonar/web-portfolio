@@ -8,7 +8,7 @@ import * as APIFirebase from "../../services/APIFirebase";
 import arrowLeft from "../../assets/icons/icons.svg";
 import arrowRight from "../../assets/icons/icons.svg";
 import "swiper/css";
-import css from "./PortfolioSwiper.module.scss";
+import scss from "./PortfolioSwiper.module.scss";
 
 const PortfolioSwiper = () => {
   const { theme } = useContext(Context);
@@ -34,24 +34,24 @@ const PortfolioSwiper = () => {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
       }}
-      className={`${css.mySwiper}`}
+      className={`${scss.mySwiper}`}
     >
       {myProjects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
-          <div className={clsx(css.content, theme && css["content-light"])}>
+          <div className={clsx(scss.content, theme && scss["content-light"])}>
             <div>
               <img
-                className={css.image}
+                className={scss.image}
                 src={image}
                 alt={`${name} site preview`}
                 width={500}
               />
             </div>
 
-            <div className={css.desc}>
-              <h3 className={css.title}>{name}</h3>
-              <p className={css.text}>{text.slice(0, 500) + "..."}</p>
-              <Link className={css.link}>More &#8594;</Link>
+            <div className={scss.desc}>
+              <h3 className={scss.title}>{name}</h3>
+              <p className={scss.text}>{text.slice(0, 500) + "..."}</p>
+              <Link className={scss.link}>More &#8594;</Link>
             </div>
           </div>
         </SwiperSlide>

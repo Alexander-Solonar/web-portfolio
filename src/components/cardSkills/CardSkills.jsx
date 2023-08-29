@@ -2,23 +2,23 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import icons from "../../assets/icons/icons.svg";
-import css from "./CardSkills.module.scss";
+import scss from "./CardSkills.module.scss";
 
 const CardSkills = ({ data }) => {
   const { theme } = useContext(Context);
   const { tag, name, description } = data;
 
   return (
-    <div className={css.card}>
-      <div className={clsx(css.content, theme && css["content-light"])}>
-        <div className={css["content-front"]}>
-          <svg className={css.icon} width="76" height="75">
+    <div className={scss.card}>
+      <div className={clsx(scss.content, theme && scss["content-light"])}>
+        <div className={scss["content-front"]}>
+          <svg className={scss.icon} width="76" height="75">
             <use href={`${icons}#icon-${tag}`} />
           </svg>
-          <p className={css.title}>{name}</p>
+          <p className={scss.title}>{name}</p>
         </div>
-        <div className={css["content-back"]}>
-          <p className={css.text}>{description}</p>
+        <div className={scss["content-back"]}>
+          <p className={scss.text}>{description}</p>
         </div>
       </div>
     </div>

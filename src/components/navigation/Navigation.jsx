@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
-import css from "./Navigation.module.scss";
+import scss from "./Navigation.module.scss";
 
 const Navigation = ({ classNameList }) => {
   const linkClassName = ({ isActive }) => {
-    const className = isActive ? css.active : css.link;
+    const className = isActive ? scss.active : scss.link;
     return className;
   };
 
   return (
-    <nav className={css.nav}>
-      <ul className={css[`${classNameList}`]}>
+    <nav className={scss.nav}>
+      <ul className={scss[`${classNameList}`]}>
         <li>
           <NavLink className={linkClassName} to="/">
             Home
@@ -22,8 +22,8 @@ const Navigation = ({ classNameList }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={linkClassName} to="/contact">
-            Contact
+          <NavLink className={linkClassName} to="/contacts">
+            Contacts
           </NavLink>
         </li>
         <li>
