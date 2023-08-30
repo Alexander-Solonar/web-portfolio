@@ -17,7 +17,7 @@ const Footer = () => {
           <ContactFooter />
           <div className={scss["box-copyright"]}>
             <Logo />
-            <p> Odessa, Ukraine</p>
+            <p className={scss.text}> Odesa, Ukraine</p>
             <p> &#169; 2023, Solonar Oleksandr</p>
           </div>
         </div>

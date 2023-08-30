@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
 import scss from "./BtnConnection.module.scss";
 
 const BtnConnection = () => {
-  return <button className={scss.button}>Contact me</button>;
+  return (
+    <Link className={scss.button} to="/contacts">
+      Contact me
+    </Link>
+  );
 };
 
 export default BtnConnection;
