@@ -12,13 +12,13 @@ import scss from "./PortfolioSwiper.module.scss";
 
 const PortfolioSwiper = () => {
   const { theme } = useContext(Context);
-  const [myProjects, setMyProjects] = useState([]);
+  const [collection, setCollection] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
         const projects = await APIFirebase.getSlidePortfolio();
-        setMyProjects(projects);
+        setCollection(projects);
       } catch (error) {
         alert(error.message);
       }
@@ -36,7 +36,7 @@ const PortfolioSwiper = () => {
       }}
       className={`${scss.mySwiper}`}
     >
-      {myProjects.map(({ id, name, image, text }) => (
+      {collection.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
           <div className={clsx(scss.content, theme && scss["content-light"])}>
             <div>

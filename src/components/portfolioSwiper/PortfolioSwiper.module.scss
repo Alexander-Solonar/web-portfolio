@@ -17,9 +17,9 @@
   color: var(--third-white-color);
   box-shadow: 0px 4px 15px 0px rgba(27, 27, 27, 0.28);
   background-image: linear-gradient(
-    123deg,
-    var(--secondary-black-color) 0%,
-    var(--primary-gray-color) 100%
+    90deg,
+    var(--primary-black-color) 0%,
+    var(--secondary-black-color) 100%
   );
 
   @media screen and (max-width: 1112px) {
@@ -37,9 +37,9 @@
 .content-light {
   color: var(--primary-black-color);
   background-image: linear-gradient(
-    123deg,
-    var(--third-white-color) 0%,
-    var(--secondary-white-color) 100%
+    90deg,
+    var(--secondary-white-color) 0%,
+    var(--primary-white-color) 100%
   );
 }
 
@@ -77,7 +77,6 @@
 
 .link {
   font-size: 18px;
-  line-height: normal;
   color: var(--secondary-yellow-color);
 
   &:hover {
