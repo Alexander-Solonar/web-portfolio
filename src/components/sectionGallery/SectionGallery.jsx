@@ -1,18 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import * as APIFirebase from "../../services/APIFirebase";
-import scss from "./GalleryPortfolio.module.scss";
+import scss from "./SectionGallery.module.scss";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 
-const GalleryPortfolio = () => {
+const SectionGallery = () => {
   const { theme } = useContext(Context);
   const [collection, setCollection] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getSlidePortfolio();
+        const projects = await APIFirebase.getProjects();
         setCollection(projects);
       } catch (error) {
         alert(error.message);
@@ -24,22 +24,22 @@ const GalleryPortfolio = () => {
     <section className={clsx(scss.gallery, theme && scss["gallery-light"])}>
       <div className="container">
         <ul className={scss.list}>
-          {collection.map(({ id, name, imgGallery, text }) => (
+          {collection.map(({ id, name, imgGallery }) => (
             <li key={id} className={scss.item}>
               <h3 className={scss.title}>{name}</h3>
-              <Link className={scss.link} href="#">
-                <div className={scss.image}>
-                  <img
-                    src={imgGallery}
-                    alt={`${name} site preview`}
-                    width={550}
-                    height={370}
-                  />
-                </div>
 
-                {/* <div className={scss.desc}>
-                  <p className={scss.text}>{text.slice(0, 200) + "..."}</p>
-                </div> */}
+              <Link
+                to={`/gallery/project/${id}`}
+                className={scss.link}
+                href="#"
+              >
+                <img
+                  className={scss.image}
+                  src={imgGallery}
+                  alt={`${name} site preview`}
+                  width={550}
+                  height={370}
+                />
               </Link>
             </li>
           ))}
@@ -49,4 +49,4 @@ const GalleryPortfolio = () => {
   );
 };
 
-export default GalleryPortfolio;
+export default SectionGallery;

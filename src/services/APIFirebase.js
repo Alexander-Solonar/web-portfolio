@@ -13,7 +13,7 @@ const firebaseConfig = {
 
 const databaseURL = `${firebaseConfig.databaseURL}/portfolio.json`;
 
-export const getSlidePortfolio = async () => {
+export const getProjects = async () => {
   const response = await axios.get(databaseURL);
   return response.data;
 };

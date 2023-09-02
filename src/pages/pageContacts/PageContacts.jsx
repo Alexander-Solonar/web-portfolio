@@ -1,6 +1,6 @@
 import SectionContacts from "../../components/sectionContacts";
 
-const Contacts = () => {
+const PageContacts = () => {
   return (
     <>
       <SectionContacts />
@@ -8,4 +8,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default PageContacts;

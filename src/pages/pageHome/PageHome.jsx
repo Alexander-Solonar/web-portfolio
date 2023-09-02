@@ -3,7 +3,7 @@ import SectionHero from "../../components/sectionHero";
 import SectionPortfolio from "../../components/sectionPortfolio";
 import SectionSkills from "../../components/sectionSkills";
 
-const Home = () => {
+const PageHome = () => {
   return (
     <>
       <SectionHero />
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PageHome;

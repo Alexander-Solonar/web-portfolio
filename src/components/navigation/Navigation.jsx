@@ -17,8 +17,8 @@ const Navigation = ({ classNameList }) => {
         </li>
 
         <li>
-          <NavLink className={linkClassName} to="/portfolio">
-            Portfolio
+          <NavLink className={linkClassName} to="/gallery">
+            Gallery
           </NavLink>
         </li>
         <li>

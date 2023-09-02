@@ -2,20 +2,22 @@ import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ContextProvider from "../context/Context";
 import Layout from "./layout";
-import Portfolio from "../pages/portfolio/Portfolio";
-const Home = lazy(() => import("../pages/home/Home.jsx"));
-const Summary = lazy(() => import("../pages/summary/Summary"));
-const Contacts = lazy(() => import("../pages/contacts/Contacts"));
+const PageHome = lazy(() => import("../pages/pageHome/PageHome.jsx"));
+const PageGallery = lazy(() => import("../pages/pageGallery/PageGallery.jsx"));
+const PageProject = lazy(() => import("../pages/pageProject/PageProject.jsx"));
+const PageContacts = lazy(() => import("../pages/pageContacts/PageContacts"));
+const PageSummary = lazy(() => import("../pages/pageSummary/PageSummary"));
 
 function App() {
   return (
     <ContextProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="contacts" element={<Contacts />} />
-          <Route path="my-summary" element={<Summary />} />
+          <Route index element={<PageHome />} />
+          <Route path="gallery" element={<PageGallery />} />
+          <Route path="gallery/project/:projectId" element={<PageProject />} />
+          <Route path="contacts" element={<PageContacts />} />
+          <Route path="my-summary" element={<PageSummary />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

@@ -17,7 +17,7 @@ const PortfolioSwiper = () => {
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getSlidePortfolio();
+        const projects = await APIFirebase.getProjects();
         setCollection(projects);
       } catch (error) {
         alert(error.message);
@@ -51,7 +51,9 @@ const PortfolioSwiper = () => {
             <div className={scss.desc}>
               <h3 className={scss.title}>{name}</h3>
               <p className={scss.text}>{text.slice(0, 500) + "..."}</p>
-              <Link className={scss.link}>More &#8594;</Link>
+              <Link className={scss.link} to={`/gallery/project/${id}`}>
+                More &#8594;
+              </Link>
             </div>
           </div>
         </SwiperSlide>

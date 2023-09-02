@@ -1,6 +1,6 @@
 import SectionSummary from "../../components/sectionSummary";
 
-const Summary = () => {
+const PageSummary = () => {
   return (
     <>
       <SectionSummary />
@@ -8,4 +8,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default PageSummary;
