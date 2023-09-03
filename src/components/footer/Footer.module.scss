@@ -30,11 +30,15 @@
   row-gap: 48px;
 }
 
-.box-copyright {
+.block-copyright {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   row-gap: 18px;
+
+  @media (max-width: 545px) {
+    align-items: center;
+  }
 }
 
 .text {

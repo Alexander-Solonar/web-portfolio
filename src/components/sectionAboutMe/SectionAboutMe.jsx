@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import home from "../../assets/images/home.jpg";
-import walk from "../../assets/images/walk.jpg";
-import sport from "../../assets/images/sport.jpg";
+import home from "../../assets/images/home.webp";
+import walk from "../../assets/images/walk.webp";
+import sport from "../../assets/images/sport.webp";
 import scss from "./SectionAboutMe.module.scss";
 
 const animation = {

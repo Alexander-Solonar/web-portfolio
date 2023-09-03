@@ -15,7 +15,7 @@ const Footer = () => {
         <div className={scss.content}>
           <Navigation classNameList={"list-footer"} />
           <ContactFooter />
-          <div className={scss["box-copyright"]}>
+          <div className={scss["block-copyright"]}>
             <Logo />
             <p className={scss.text}> Odesa, Ukraine</p>
             <p> &#169; 2023, Solonar Oleksandr</p>

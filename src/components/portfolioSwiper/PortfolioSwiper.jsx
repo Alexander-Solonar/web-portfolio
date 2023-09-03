@@ -17,7 +17,7 @@ const PortfolioSwiper = () => {
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getProjects();
+        const projects = await APIFirebase.getProjectsCollection();
         setCollection(projects);
       } catch (error) {
         alert(error.message);

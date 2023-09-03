@@ -24,7 +24,7 @@
   align-items: center;
   row-gap: 30px;
   padding: 50px 0;
-  background-image: url("../../assets/images/background.png");
+  background-image: url("../../assets/images/background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,6 +43,7 @@
 .link {
   display: inline-block;
   padding: 6px 15px;
+  font-weight: 400;
   color: inherit;
   background-color: var(--secondary-yellow-color);
 

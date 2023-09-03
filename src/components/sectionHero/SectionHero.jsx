@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import BtnConnection from "../btnConnection/BtnConnection";
-import image from "../../assets/images/hero-image.png";
+import image from "../../assets/images/hero-image.webp";
 import scss from "./SectionHero.module.scss";
 
 const SectionHero = () => {
@@ -24,7 +24,7 @@ const SectionHero = () => {
             <BtnConnection />
           </div>
           <div className={scss.image}>
-            <img src={image} alt="#" width={980} />
+            <img src={image} alt="#" width={900} />
           </div>
         </div>
       </div>

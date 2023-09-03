@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
-import cv from "../../assets/images/cv-image.jpg";
+import cv from "../../assets/images/cv-image.webp";
 import scss from "./SectionSummary.module.scss";
 
 const SectionSummary = () => {
@@ -11,7 +11,7 @@ const SectionSummary = () => {
     <section className={clsx(scss.summary, theme && scss["summary-light"])}>
       <div className="container">
         <div className={scss.content}>
-          <img className={scss.cv} src={cv} alt="" width={285} height={403} />
+          <img className={scss.cv} src={cv} alt="" width={300} height={425} />
 
           <div className={scss.boxBtn}>
             <a

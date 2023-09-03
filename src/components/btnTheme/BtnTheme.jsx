@@ -16,12 +16,14 @@ const BtnTheme = () => {
       <svg className={scss["icon-moon"]} width="16" height="16">
         <use href={`${icons}#icon-moon`}></use>
       </svg>
-      <input
-        type="checkbox"
-        checked={theme}
-        className={scss["switch-input"]}
-        onChange={handleCheckboxChange}
-      />
+      <label className={scss["label-switch-input"]}>
+        <input
+          type="checkbox"
+          checked={theme}
+          className={scss["switch-input"]}
+          onChange={handleCheckboxChange}
+        />
+      </label>
       <svg className={scss["icon-sun"]} width="16" height="16">
         <use href={`${icons}#icon-sun`}></use>
       </svg>

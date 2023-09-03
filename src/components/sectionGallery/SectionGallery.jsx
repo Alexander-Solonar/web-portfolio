@@ -3,16 +3,18 @@ import * as APIFirebase from "../../services/APIFirebase";
 import scss from "./SectionGallery.module.scss";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SectionGallery = () => {
   const { theme } = useContext(Context);
   const [collection, setCollection] = useState([]);
 
+  const location = useLocation();
+
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getProjects();
+        const projects = await APIFirebase.getProjectsCollection();
         setCollection(projects);
       } catch (error) {
         alert(error.message);
@@ -31,7 +33,7 @@ const SectionGallery = () => {
               <Link
                 to={`/gallery/project/${id}`}
                 className={scss.link}
-                href="#"
+                state={{ from: location }}
               >
                 <img
                   className={scss.image}

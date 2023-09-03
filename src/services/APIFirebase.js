@@ -11,9 +11,16 @@ const firebaseConfig = {
   measurementId: "G-8YTR94JDSK",
 };
 
-const databaseURL = `${firebaseConfig.databaseURL}/portfolio.json`;
+const databaseURL = firebaseConfig.databaseURL;
 
-export const getProjects = async () => {
-  const response = await axios.get(databaseURL);
+export const getProjectsCollection = async () => {
+  const response = await axios.get(`${databaseURL}/portfolio.json`);
+  return response.data;
+};
+
+export const getProject = async (projectId) => {
+  const response = await axios.get(
+    `${databaseURL}/portfolio/${projectId}.json`
+  );
   return response.data;
 };

@@ -17,6 +17,10 @@
   display: flex;
   flex-direction: column;
   row-gap: 18px;
+
+  @media (max-width: 323px) {
+    align-items: center;
+  }
 }
 
 .link,

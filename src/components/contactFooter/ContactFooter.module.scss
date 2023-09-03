@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: column;
   row-gap: 18px;
+
+  @media (max-width: 323px) {
+    align-items: center;
+  }
 }
 
 .list {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+
+  @media (max-width: 323px) {
+    align-items: center;
+  }
 }
 
 .item {
