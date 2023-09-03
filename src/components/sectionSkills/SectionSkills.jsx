@@ -23,7 +23,7 @@ const SectionSkills = () => {
   return (
     <section className={clsx(scss.skills, theme && scss["skills-light"])}>
       <div className="container">
-        <h2 className={scss.title}>Skills</h2>
+        <h2 className={scss.title}>My Skills</h2>
         <ul className={scss.list}>
           {data.map((element) => (
             <li key={element.id} className={scss.item}>

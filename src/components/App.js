@@ -17,7 +17,7 @@ function App() {
           <Route path="gallery" element={<PageGallery />} />
           <Route path="gallery/project/:projectId" element={<PageProject />} />
           <Route path="contacts" element={<PageContacts />} />
-          <Route path="my-summary" element={<PageSummary />} />
+          <Route path="summary" element={<PageSummary />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

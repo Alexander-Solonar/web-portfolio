@@ -16,8 +16,8 @@ const SectionHero = () => {
             <h3 className={scss["sub-title"]}>Hi!</h3>
             <h1 className={scss.title}>I’m Oleksandr Solonar</h1>
             <p className={scss.text}>
-              I've been doing web design, front-end and back-end development for
-              a year now. Do you need a website design, site layout, or maybe a
+              I'm a front-end developer and this is my website "Portfolio" a
+              year now. Do you need a website design, site layout, or maybe a
               turnkey website? Then contact me
             </p>
 

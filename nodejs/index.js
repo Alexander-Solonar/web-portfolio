@@ -35,6 +35,7 @@ const validateData = [
     .withMessage("No name.")
     .isLength({ min: 3, max: 50 })
     .withMessage("Name must be 3-50 characters."),
+  body("telegram").customSanitizer(trimReplace),
   body("email")
     .customSanitizer(trimReplace)
     .notEmpty()
@@ -57,12 +58,14 @@ app.post("/send-email", validateData, async (req, res) => {
       return res.status(422).json({ errors: errors.array() });
     }
 
-    const { name, email, message } = req.body;
+    const { name, telegram, email, message } = req.body;
+
     await transporter.sendMail({
       from: process.env.email,
       to: "solo991@ukr.net",
       subject: `Message from ${name}`,
-      html: `<p><strong>Email:</strong> ${email}</p>
+      html: `<p><strong>Telegram:</strong> ${telegram}</p>
+      <p><strong>Email:</strong> ${email}</p>
         <p> ${message}</p>`,
     });
 

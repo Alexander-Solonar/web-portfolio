@@ -14,6 +14,7 @@ const FormError = ({ name }) => {
 
 let schema = object({
   name: string().trim().required("Name is a required field"),
+  telegram: string().trim(),
   email: string().email().required("Email is a required field"),
   message: string().trim().required("Message is a required field"),
 });
@@ -21,6 +22,7 @@ let schema = object({
 const FormFeedback = () => {
   const initialValues = {
     name: "",
+    telegram: "",
     email: "",
     message: "",
   };
@@ -50,16 +52,28 @@ const FormFeedback = () => {
       onSubmit={handleSubmit}
     >
       <Form className={scss.form} autoComplete="off">
-        <label className={scss.label}>
-          Name
-          <Field
-            className={scss.input}
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-          />
-          <FormError name="name" />
-        </label>
+        <div className={scss.block}>
+          <label className={scss.label}>
+            Name
+            <Field
+              className={scss.input}
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+            />
+            <FormError name="name" />
+          </label>
+
+          <label className={scss.label}>
+            Telegram
+            <Field
+              className={scss.input}
+              type="text"
+              name="telegram"
+              placeholder="Enter your telegram"
+            />
+          </label>
+        </div>
 
         <label className={scss.label}>
           Email
