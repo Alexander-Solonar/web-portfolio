@@ -23,14 +23,16 @@ const SectionSkills = () => {
   return (
     <section className={clsx(scss.skills, theme && scss["skills-light"])}>
       <div className="container">
-        <h2 className={scss.title}>My Skills</h2>
-        <ul className={scss.list}>
-          {data.map((element) => (
-            <li key={element.id} className={scss.item}>
-              <CardSkills data={element} />
-            </li>
-          ))}
-        </ul>
+        <div className={scss.content}>
+          <h2 className={scss.title}>My Skills</h2>
+          <ul className={scss.list}>
+            {data.map((element) => (
+              <li key={element.id} className={scss.item}>
+                <CardSkills data={element} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

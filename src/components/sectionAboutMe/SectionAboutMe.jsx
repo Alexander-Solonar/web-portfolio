@@ -2,9 +2,7 @@ import { useContext } from "react";
 import { Context } from "../../context/Context";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import home from "../../assets/images/home.webp";
 import walk from "../../assets/images/walk.webp";
-import sport from "../../assets/images/sport.webp";
 import scss from "./SectionAboutMe.module.scss";
 
 const animation = {
@@ -23,34 +21,6 @@ const SectionAboutMe = () => {
   return (
     <section className={clsx(scss.aboutMe, theme && scss["aboutMe-light"])}>
       <div className={scss.content}>
-        <div className={scss["box-left-img"]}>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.4, once: true }}
-            custom={1}
-            variants={animation}
-            className={clsx(
-              scss["left-top-img"],
-              theme && scss["left-top-img-light"]
-            )}
-          >
-            <img src={home} alt="man" width={284} />
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.9, once: true }}
-            custom={1}
-            variants={animation}
-            className={clsx(
-              scss["left-bottom-img"],
-              theme && scss["left-bottom-img-light"]
-            )}
-          >
-            <img src={sport} alt="man" width={262} />
-          </motion.div>
-        </div>
         <div
           className={clsx(scss["box-desc"], theme && scss["box-desc-light"])}
         >
@@ -74,19 +44,18 @@ const SectionAboutMe = () => {
             contacts below.
           </p>
         </div>
-        <div className={scss["box-right-img"]}>
+        <div className={scss["block-image"]}>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.7, once: true }}
             custom={1}
             variants={animation}
-            className={clsx(
-              scss["right-img"],
-              theme && scss["right-img-light"]
-            )}
+            className={clsx(scss.image, theme && scss["image-light"])}
           >
-            <img src={walk} alt="man" width={299} />
+            <div className={scss["border-image"]}>
+              <img src={walk} alt="man" width={360} />
+            </div>
           </motion.div>
         </div>
       </div>

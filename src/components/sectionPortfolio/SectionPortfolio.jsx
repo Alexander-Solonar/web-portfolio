@@ -10,8 +10,10 @@ const SectionPortfolio = () => {
   return (
     <section className={clsx(scss.portfolio, theme && scss["portfolio-light"])}>
       <div className="container">
-        <h2 className={scss.title}>Portfolio</h2>
-        <PortfolioSwiper />
+        <div className={scss.content}>
+          <h2 className={scss.title}>Portfolio</h2>
+          <PortfolioSwiper />
+        </div>
       </div>
     </section>
   );
