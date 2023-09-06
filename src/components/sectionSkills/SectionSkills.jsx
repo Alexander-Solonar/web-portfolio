@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
+
 import clsx from "clsx";
-import * as API from "../../services/API";
+import * as APIFireBase from "../../services/APIFirebase";
 import CardSkills from "../cardSkills";
 import scss from "./SectionSkills.module.scss";
 
@@ -12,7 +13,7 @@ const SectionSkills = () => {
   useEffect(() => {
     (async () => {
       try {
-        const skills = await API.getListCardSkills();
+        const skills = await APIFireBase.getSkillsCollection();
         setData(skills);
       } catch (error) {
         alert(error.message);
