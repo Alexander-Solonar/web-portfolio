@@ -30,7 +30,7 @@ const FormFeedback = () => {
   const handleSubmit = async (values, actions) => {
     try {
       const response = await fetch(
-        "https://web-portfolio-server-npxr.onrender.com",
+        "https://my-portfolio-gytx.onrender.com/send-email",
         {
           method: "POST",
           headers: {
