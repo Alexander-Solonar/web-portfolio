@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { object, string } from "yup";
 import Notiflix from "notiflix";
 import scss from "./FormFeedback.module.scss";
+import { useState } from "react";
 
 const FormError = ({ name }) => {
   return (
@@ -20,6 +21,8 @@ let schema = object({
 });
 
 const FormFeedback = () => {
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+
   const initialValues = {
     name: "",
     telegram: "",
@@ -29,6 +32,8 @@ const FormFeedback = () => {
 
   const handleSubmit = async (values, actions) => {
     try {
+      setButtonDisabled(true);
+      actions.resetForm();
       const response = await fetch(
         "https://my-portfolio-gytx.onrender.com/send-email",
         {
@@ -41,10 +46,11 @@ const FormFeedback = () => {
       );
       if (response.ok) {
         Notiflix.Notify.success("Email sent successfully");
-        actions.resetForm();
       }
     } catch (error) {
       Notiflix.Notify.failure(error.message);
+    } finally {
+      setButtonDisabled(false);
     }
   };
 
@@ -100,7 +106,11 @@ const FormFeedback = () => {
           <FormError name="message" />
         </label>
 
-        <button className={scss.button} type="submit">
+        <button
+          className={scss.button}
+          type="submit"
+          disabled={isButtonDisabled}
+        >
           Send the message
         </button>
       </Form>
