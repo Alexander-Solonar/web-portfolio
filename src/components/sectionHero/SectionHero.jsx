@@ -24,7 +24,12 @@ const SectionHero = () => {
             <BtnConnection />
           </div>
           <div className={scss.image}>
-            <img src={image} alt="#" width={900} />
+            <img
+              src={image}
+              alt="blue technology elements icon"
+              width={900}
+              height={599}
+            />
           </div>
         </div>
       </div>

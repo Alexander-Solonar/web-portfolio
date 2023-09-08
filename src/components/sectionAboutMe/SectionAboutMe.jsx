@@ -53,7 +53,7 @@ const SectionAboutMe = () => {
             className={clsx(scss.image, theme && scss["image-light"])}
           >
             <div className={scss["border-image"]}>
-              <img src={walk} alt="man" width={360} />
+              <img src={walk} alt="man" width={360} height={540} />
             </div>
           </motion.div>
         </div>
