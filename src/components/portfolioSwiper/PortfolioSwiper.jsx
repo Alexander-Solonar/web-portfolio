@@ -45,7 +45,6 @@ const PortfolioSwiper = () => {
                 src={image}
                 alt={`${name} site preview`}
                 width={500}
-                height={500}
               />
             </div>
 
