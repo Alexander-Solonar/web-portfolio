@@ -1,11 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
-
 import { Link, useLocation, useParams } from "react-router-dom";
-import * as APIFirebase from "../../services/APIFirebase";
-import scss from "./SectionProject.module.scss";
 import { Context } from "../../context/Context";
+import * as APIFirebase from "../../services/APIFirebase";
 import clsx from "clsx";
 import icons from "../../assets/icons/icons.svg";
+import scss from "./SectionProject.module.scss";
 
 const SectionProject = () => {
   const { theme } = useContext(Context);

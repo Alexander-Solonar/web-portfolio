@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { object, string } from "yup";
 import Notiflix from "notiflix";
 import scss from "./FormFeedback.module.scss";
-import { useState } from "react";
 
 const FormError = ({ name }) => {
   return (

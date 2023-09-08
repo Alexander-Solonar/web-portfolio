@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import icons from "../../assets/icons/icons.svg";
 import scss from "./CardSkills.module.scss";
@@ -26,3 +27,11 @@ const CardSkills = ({ data }) => {
 };
 
 export default CardSkills;
+
+CardSkills.propTypes = {
+  data: PropTypes.shape({
+    tag: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }),
+};

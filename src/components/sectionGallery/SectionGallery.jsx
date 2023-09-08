@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import * as APIFirebase from "../../services/APIFirebase";
-import scss from "./SectionGallery.module.scss";
-import { Context } from "../../context/Context";
-import clsx from "clsx";
 import { Link, useLocation } from "react-router-dom";
+import { Context } from "../../context/Context";
+import * as APIFirebase from "../../services/APIFirebase";
+import clsx from "clsx";
+import scss from "./SectionGallery.module.scss";
 
 const SectionGallery = () => {
   const { theme } = useContext(Context);

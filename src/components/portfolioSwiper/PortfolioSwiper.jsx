@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import clsx from "clsx";
+import * as APIFirebase from "../../services/APIFirebase";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import * as APIFirebase from "../../services/APIFirebase";
+import "swiper/css";
+import clsx from "clsx";
 import arrowLeft from "../../assets/icons/icons.svg";
 import arrowRight from "../../assets/icons/icons.svg";
-import "swiper/css";
 import scss from "./PortfolioSwiper.module.scss";
 
 const PortfolioSwiper = () => {

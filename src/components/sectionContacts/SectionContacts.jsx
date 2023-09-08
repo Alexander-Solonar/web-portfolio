@@ -1,6 +1,6 @@
-import clsx from "clsx";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import clsx from "clsx";
 import FormFeedback from "../formFeedback";
 import MyContacts from "../myContacts/MyContacts";
 import scss from "./SectionContacts.module.scss";

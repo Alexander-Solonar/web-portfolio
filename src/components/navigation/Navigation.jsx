@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 import scss from "./Navigation.module.scss";
 
 const Navigation = ({ classNameList }) => {
@@ -37,3 +38,7 @@ const Navigation = ({ classNameList }) => {
 };
 
 export default Navigation;
+
+Navigation.propTypes = {
+  classNameList: PropTypes.string.isRequired,
+};
