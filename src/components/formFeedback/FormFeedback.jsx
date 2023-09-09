@@ -34,7 +34,7 @@ const FormFeedback = () => {
     try {
       setButtonDisabled(true);
       actions.resetForm();
-      Notiflix.Notify.success('Email sent successfully');
+      Notiflix.Notify.success('Thanks! Your massage has been sent.');
       const response = await fetch(
         'https://my-portfolio-gytx.onrender.com/send-email',
         {
@@ -45,9 +45,6 @@ const FormFeedback = () => {
           body: JSON.stringify(values),
         }
       );
-      if (response.ok) {
-        Notiflix.Notify.success('Email sent successfully');
-      }
     } catch (error) {
       Notiflix.Notify.failure(error.message);
     } finally {
