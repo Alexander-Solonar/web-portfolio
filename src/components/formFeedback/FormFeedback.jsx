@@ -35,16 +35,13 @@ const FormFeedback = () => {
       setButtonDisabled(true);
       actions.resetForm();
       Notiflix.Notify.success('Thanks! Your massage has been sent.');
-      const response = await fetch(
-        'https://my-portfolio-gytx.onrender.com/send-email',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(values),
-        }
-      );
+      await fetch('https://my-portfolio-gytx.onrender.com/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
     } catch (error) {
       Notiflix.Notify.failure(error.message);
     } finally {
