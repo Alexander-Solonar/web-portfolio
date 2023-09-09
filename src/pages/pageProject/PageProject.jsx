@@ -1,7 +1,11 @@
-import SectionProject from "../../components/sectionProject/SectionProject";
+import SectionProject from '../../components/sectionProject/SectionProject';
 
 const PageProject = () => {
-  return <SectionProject />;
+  return (
+    <>
+      <SectionProject />
+    </>
+  );
 };
 
 export default PageProject;

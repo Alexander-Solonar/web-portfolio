@@ -1,51 +1,52 @@
-import { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { object, string } from "yup";
-import Notiflix from "notiflix";
-import scss from "./FormFeedback.module.scss";
+import { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { object, string } from 'yup';
+import Notiflix from 'notiflix';
+import scss from './FormFeedback.module.scss';
 
 const FormError = ({ name }) => {
   return (
     <ErrorMessage
       name={name}
-      render={(message) => <p className={scss.error}>{message}</p>}
+      render={message => <p className={scss.error}>{message}</p>}
     />
   );
 };
 
 let schema = object({
-  name: string().trim().required("Name is a required field"),
+  name: string().trim().required('Name is a required field'),
   telegram: string().trim(),
-  email: string().email().required("Email is a required field"),
-  message: string().trim().required("Message is a required field"),
+  email: string().email().required('Email is a required field'),
+  message: string().trim().required('Message is a required field'),
 });
 
 const FormFeedback = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
 
   const initialValues = {
-    name: "",
-    telegram: "",
-    email: "",
-    message: "",
+    name: '',
+    telegram: '',
+    email: '',
+    message: '',
   };
 
   const handleSubmit = async (values, actions) => {
     try {
       setButtonDisabled(true);
       actions.resetForm();
+      Notiflix.Notify.success('Email sent successfully');
       const response = await fetch(
-        "https://my-portfolio-gytx.onrender.com/send-email",
+        'https://my-portfolio-gytx.onrender.com/send-email',
         {
-          method: "POST",
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(values),
         }
       );
       if (response.ok) {
-        Notiflix.Notify.success("Email sent successfully");
+        Notiflix.Notify.success('Email sent successfully');
       }
     } catch (error) {
       Notiflix.Notify.failure(error.message);

@@ -1,10 +1,10 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import { Context } from "../../context/Context";
-import * as APIFirebase from "../../services/APIFirebase";
-import clsx from "clsx";
-import icons from "../../assets/icons/icons.svg";
-import scss from "./SectionProject.module.scss";
+import { useContext, useEffect, useRef, useState } from 'react';
+import { Link, useLocation, useParams } from 'react-router-dom';
+import { Context } from '../../context/Context';
+import * as APIFirebase from '../../services/APIFirebase';
+import clsx from 'clsx';
+import icons from '../../assets/icons/icons.svg';
+import scss from './SectionProject.module.scss';
 
 const SectionProject = () => {
   const { theme } = useContext(Context);
@@ -12,9 +12,12 @@ const SectionProject = () => {
   const [collection, setCollection] = useState({});
 
   const location = useLocation();
-  const backLinkHref = useRef(location.state?.from ?? "/");
+  const backLinkHref = useRef(location.state?.from ?? '/');
+  const scrollPosition = useRef(location.state?.scrollPosition?.current || 0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     (async () => {
       try {
         const project = await APIFirebase.getProject(projectId);
@@ -26,9 +29,13 @@ const SectionProject = () => {
   }, [projectId]);
 
   return (
-    <section className={clsx(scss.project, theme && scss["project-light"])}>
+    <section className={clsx(scss.project, theme && scss['project-light'])}>
       <div className="container">
-        <Link className={scss.backLink} to={backLinkHref.current}>
+        <Link
+          className={scss.backLink}
+          to={backLinkHref.current}
+          state={{ scroll: scrollPosition }}
+        >
           <svg className={scss.icon} width={45} height={45}>
             <use href={`${icons}#icon-btnback`} />
           </svg>
