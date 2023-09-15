@@ -1,4 +1,7 @@
 .logo {
   display: flex;
   fill: var(--primary-blue-color);
+  @media (max-width: 390px) {
+    width: 130px;
+  }
 }

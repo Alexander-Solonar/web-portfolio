@@ -7,9 +7,6 @@
     var(--secondary-black-color) 0%,
     var(--primary-gray-color) 100%
   );
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
 }
 
 .skills-light {
@@ -36,7 +33,7 @@
   line-height: 1.32;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -10px;
     left: 50%;

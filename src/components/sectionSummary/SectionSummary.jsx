@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { Context } from '../../context/Context';
+import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
 import cv from '../../assets/images/cv-image.webp';
 import scss from './SectionSummary.module.scss';
 
 const SectionSummary = () => {
   const { theme } = useContext(Context);
+  const { t } = useTranslation();
 
   return (
     <section className={clsx(scss.summary, theme && scss['summary-light'])}>
@@ -20,7 +22,7 @@ const SectionSummary = () => {
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              Open CV EN
+              {t('summary')} CV EN
             </a>
             <a
               className={scss.link}
@@ -28,7 +30,7 @@ const SectionSummary = () => {
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
-              Open CV UA
+              {t('summary')} CV UA
             </a>
           </div>
         </div>

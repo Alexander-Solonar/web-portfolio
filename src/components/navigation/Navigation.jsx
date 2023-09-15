@@ -1,8 +1,11 @@
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
-import scss from "./Navigation.module.scss";
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+import scss from './Navigation.module.scss';
 
 const Navigation = ({ classNameList }) => {
+  const { t } = useTranslation();
+
   const linkClassName = ({ isActive }) => {
     const className = isActive ? scss.active : scss.link;
     return className;
@@ -13,23 +16,23 @@ const Navigation = ({ classNameList }) => {
       <ul className={scss[`${classNameList}`]}>
         <li>
           <NavLink className={linkClassName} to="/">
-            Home
+            {t('header.home')}
           </NavLink>
         </li>
 
         <li>
           <NavLink className={linkClassName} to="/gallery">
-            Gallery
+            {t('header.gallery')}
           </NavLink>
         </li>
         <li>
           <NavLink className={linkClassName} to="/contacts">
-            Contacts
+            {t('header.contacts')}
           </NavLink>
         </li>
         <li>
           <NavLink className={linkClassName} to="/summary">
-            Summary
+            {t('header.summary')}
           </NavLink>
         </li>
       </ul>

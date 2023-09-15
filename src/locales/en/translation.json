@@ -1,0 +1,45 @@
+{
+  "header": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "contacts": "Contacts",
+    "summary": "Summary"
+  },
+  "hero": {
+    "greetings": "Hi!",
+    "name": "I’m Oleksandr Solonar",
+    "description": "I'm a Front-end developer and this is my Portfolio site. I have been doing front-end development for over 1.5 years. I'm currently looking for a job. If you have an open vacancy please contact me.",
+    "button": "Contact me"
+  },
+  "skills": {
+    "title": "My Skills"
+  },
+  "aboutMe": {
+    "title": "About me",
+    "text": "Hello, my name is Alexander, and here is some information about me. I'm 32 years old, and I've always had a passion for sports, particularly football. Over 17 months ago, I made the decision to dive into the world of programming, specifically front-end development. After completing my education at GoIT IT school, I gained a solid knowledge foundation. In both work and life, I always uphold personal qualities like responsibility, perseverance, and punctuality. I genuinely enjoy the world of programming and crafting unique web applications. Currently, I'm in the process of seeking new career opportunities and am open to considering job offers. If you're interested in my portfolio or would like to get in touch with me, you'll find my contact information below or can visit the 'Contacts' page. My goal is to continue growing in the field of front-end development and contribute my skills to exciting projects that make a positive impact."
+  },
+  "portfolio": {
+    "title": "Portfolio"
+  },
+
+  "contacts": {
+    "title": "Get in touch with me",
+    "sub": "Location"
+  },
+  "form": {
+    "name": "Name",
+    "telegram": "Telegram",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send the message",
+    "notify": "Thanks! Your message has been sent!",
+    "placeholderN": "Enter your name",
+    "placeholderT": "Enter your telegram",
+    "placeholderE": "Enter your email",
+    "placeholderM": "Enter your message"
+  },
+
+  "location": "Odesa, Ukraine",
+  "summary": "Open",
+  "site": "site"
+}

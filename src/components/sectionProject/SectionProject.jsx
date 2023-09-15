@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
 import * as APIFirebase from '../../services/APIFirebase';
 import clsx from 'clsx';
@@ -10,6 +11,7 @@ const SectionProject = () => {
   const { theme } = useContext(Context);
   const { projectId } = useParams();
   const [collection, setCollection] = useState({});
+  const { t, i18n } = useTranslation();
 
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
@@ -20,13 +22,13 @@ const SectionProject = () => {
 
     (async () => {
       try {
-        const project = await APIFirebase.getProject(projectId);
+        const project = await APIFirebase.getProject(i18n.language, projectId);
         setCollection(project);
       } catch (error) {
         alert(error.message);
       }
     })();
-  }, [projectId]);
+  }, [i18n.language, projectId]);
 
   return (
     <section className={clsx(scss.project, theme && scss['project-light'])}>
@@ -66,7 +68,7 @@ const SectionProject = () => {
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                live Page
+                {t('site')} {collection.tag}
               </a>
             </div>
           </div>

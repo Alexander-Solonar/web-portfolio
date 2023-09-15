@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import icons from "../../assets/icons/icons.svg";
-import scss from "./Logo.module.scss";
+import { Link } from 'react-router-dom';
+import icons from '../../assets/icons/icons.svg';
+import scss from './Logo.module.scss';
 
 const Logo = () => {
   const handleClick = () => {

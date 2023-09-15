@@ -1,11 +1,14 @@
-import icons from "../../assets/icons/icons.svg";
-import flag from "../../assets/images/ukraine.png";
-import scss from "./MyContacts.module.scss";
+import { useTranslation } from 'react-i18next';
+import icons from '../../assets/icons/icons.svg';
+import flag from '../../assets/images/ukraine.png';
+import scss from './MyContacts.module.scss';
 
 const MyContacts = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className={scss["block-contacts"]}>
-      <h1 className={scss.title}>Get in touch with me</h1>
+    <div className={scss['block-contacts']}>
+      <h1 className={scss.title}>{t('contacts.title')}</h1>
       <ul className={scss.list}>
         <li className={scss.item}>
           <a className={scss.link} href="tel:+380689441877">
@@ -68,7 +71,7 @@ const MyContacts = () => {
           </a>
         </li>
       </ul>
-      <h3 className={scss["sun-title"]}>Location :</h3>
+      <h3 className={scss['sun-title']}>{t('contacts.sub')} :</h3>
       <address className={scss.address}>
         <a
           className={scss.link}
@@ -76,7 +79,7 @@ const MyContacts = () => {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          Odesa, Ukraine <img width={24} src={flag} alt="flag-ukr" />
+          {t('location')} <img width={24} src={flag} alt="flag-ukr" />
         </a>
       </address>
     </div>

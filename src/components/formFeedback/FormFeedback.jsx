@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
+import { useTranslation } from 'react-i18next';
 import Notiflix from 'notiflix';
 import scss from './FormFeedback.module.scss';
 
@@ -22,6 +23,8 @@ let schema = object({
 
 const FormFeedback = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
+  const { t } = useTranslation();
+  const notifySuccess = t('form.notify');
 
   const initialValues = {
     name: '',
@@ -34,7 +37,7 @@ const FormFeedback = () => {
     try {
       setButtonDisabled(true);
       actions.resetForm();
-      Notiflix.Notify.success('Thanks! Your massage has been sent.');
+      Notiflix.Notify.success(notifySuccess);
       await fetch('https://my-portfolio-gytx.onrender.com/send-email', {
         method: 'POST',
         headers: {
@@ -58,45 +61,45 @@ const FormFeedback = () => {
       <Form className={scss.form} autoComplete="off">
         <div className={scss.block}>
           <label className={scss.label}>
-            Name
+            {t('form.name')}
             <Field
               className={scss.input}
               type="text"
               name="name"
-              placeholder="Enter your name"
+              placeholder={t('form.placeholderN')}
             />
             <FormError name="name" />
           </label>
 
           <label className={scss.label}>
-            Telegram
+            {t('form.telegram')}
             <Field
               className={scss.input}
               type="text"
               name="telegram"
-              placeholder="Enter your telegram"
+              placeholder={t('form.placeholderT')}
             />
           </label>
         </div>
 
         <label className={scss.label}>
-          Email
+          {t('form.email')}
           <Field
             className={scss.input}
             type="email"
             name="email"
-            placeholder="Enter your email"
+            placeholder={t('form.placeholderE')}
           />
           <FormError name="email" />
         </label>
 
         <label className={scss.label}>
-          Message
+          {t('form.message')}
           <Field
             className={scss.textarea}
             as="textarea"
             name="message"
-            placeholder="Enter your message"
+            placeholder={t('form.placeholderM')}
           ></Field>
           <FormError name="message" />
         </label>
@@ -106,7 +109,7 @@ const FormFeedback = () => {
           type="submit"
           disabled={isButtonDisabled}
         >
-          Send the message
+          {t('form.button')}
         </button>
       </Form>
     </Formik>

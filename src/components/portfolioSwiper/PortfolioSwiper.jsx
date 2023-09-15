@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import clsx from 'clsx';
+import { useTranslation } from 'react-i18next';
 import arrowLeft from '../../assets/icons/icons.svg';
 import arrowRight from '../../assets/icons/icons.svg';
 import scss from './PortfolioSwiper.module.scss';
@@ -16,6 +17,7 @@ const PortfolioSwiper = () => {
   const scrollPositionRef = useRef(0);
   const location = useLocation();
   const saveScroll = location?.state?.scroll?.current || 0;
+  const { i18n } = useTranslation();
 
   const handleScroll = () => {
     scrollPositionRef.current = window.scrollY;
@@ -24,13 +26,13 @@ const PortfolioSwiper = () => {
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getProjectsCollection();
+        const projects = await APIFirebase.getProjectsCollection(i18n.language);
         setCollection(projects);
       } catch (error) {
         alert(error.message);
       }
     })();
-  }, []);
+  }, [i18n.language]);
 
   useEffect(() => {
     window.scrollTo(0, saveScroll);
@@ -67,7 +69,7 @@ const PortfolioSwiper = () => {
 
             <div className={scss.desc}>
               <h3 className={scss.title}>{name}</h3>
-              <p className={scss.text}>{text.slice(0, 500) + '...'}</p>
+              <p className={scss.text}>{text.slice(0, 400) + '...'}</p>
               <Link
                 className={scss.link}
                 to={`/gallery/project/${id}`}

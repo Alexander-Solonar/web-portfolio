@@ -1,10 +1,11 @@
 .block-contact {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   row-gap: 18px;
 
-  @media (max-width: 323px) {
-    align-items: center;
+  @media (max-width: 674px) {
+    justify-content: center;
   }
 }
 
@@ -13,7 +14,7 @@
   flex-direction: column;
   row-gap: 12px;
 
-  @media (max-width: 323px) {
+  @media (max-width: 395px) {
     align-items: center;
   }
 }

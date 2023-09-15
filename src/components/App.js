@@ -1,12 +1,13 @@
-import { lazy } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import ContextProvider from "../context/Context";
-import Layout from "./layout";
-const PageHome = lazy(() => import("../pages/pageHome/PageHome.jsx"));
-const PageGallery = lazy(() => import("../pages/pageGallery/PageGallery.jsx"));
-const PageProject = lazy(() => import("../pages/pageProject/PageProject.jsx"));
-const PageContacts = lazy(() => import("../pages/pageContacts/PageContacts"));
-const PageSummary = lazy(() => import("../pages/pageSummary/PageSummary"));
+import { lazy } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import ContextProvider from '../context/Context';
+import Layout from './layout';
+
+const PageHome = lazy(() => import('../pages/pageHome/PageHome.jsx'));
+const PageGallery = lazy(() => import('../pages/pageGallery/PageGallery.jsx'));
+const PageProject = lazy(() => import('../pages/pageProject/PageProject.jsx'));
+const PageContacts = lazy(() => import('../pages/pageContacts/PageContacts'));
+const PageSummary = lazy(() => import('../pages/pageSummary/PageSummary'));
 
 function App() {
   return (
@@ -24,5 +25,4 @@ function App() {
     </ContextProvider>
   );
 }
-
 export default App;

@@ -1,10 +1,9 @@
-import icons from "../../assets/icons/icons.svg";
-import scss from "./ContactFooter.module.scss";
+import icons from '../../assets/icons/icons.svg';
+import scss from './ContactFooter.module.scss';
 
 const ContactFooter = () => {
   return (
-    <div className={scss["block-contact"]}>
-      <p>Contact</p>
+    <div className={scss['block-contact']}>
       <ul className={scss.list}>
         <li className={scss.item}>
           <a
