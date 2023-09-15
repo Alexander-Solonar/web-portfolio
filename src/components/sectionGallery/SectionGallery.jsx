@@ -16,13 +16,15 @@ const SectionGallery = () => {
   useEffect(() => {
     (async () => {
       try {
-        const projects = await APIFirebase.getProjectsCollection(i18n.language);
+        const projects = await APIFirebase.getProjectsCollection(
+          i18n.resolvedLanguage
+        );
         setCollection(projects);
       } catch (error) {
         alert(error.message);
       }
     })();
-  }, [i18n.language]);
+  }, [i18n.resolvedLanguage]);
 
   return (
     <section className={clsx(scss.gallery, theme && scss['gallery-light'])}>
