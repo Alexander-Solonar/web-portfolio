@@ -13,14 +13,20 @@ const BtnLanguage = () => {
   return (
     <div className={scss.content}>
       <button
-        className={clsx(scss.button, i18n.language === 'ua' && scss.active)}
+        className={clsx(
+          scss.button,
+          i18n.resolvedLanguage === 'ua' && scss.active
+        )}
         onClick={() => changeLanguage('ua')}
       >
         UA
       </button>
       <span className={scss.slash}>/</span>
       <button
-        className={clsx(scss.button, i18n.language === 'en' && scss.active)}
+        className={clsx(
+          scss.button,
+          i18n.resolvedLanguage === 'en' && scss.active
+        )}
         onClick={() => changeLanguage('en')}
       >
         EN

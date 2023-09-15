@@ -22,13 +22,16 @@ const SectionProject = () => {
 
     (async () => {
       try {
-        const project = await APIFirebase.getProject(i18n.language, projectId);
+        const project = await APIFirebase.getProject(
+          i18n.resolvedLanguage,
+          projectId
+        );
         setCollection(project);
       } catch (error) {
         alert(error.message);
       }
     })();
-  }, [i18n.language, projectId]);
+  }, [i18n.resolvedLanguage, projectId]);
 
   return (
     <section className={clsx(scss.project, theme && scss['project-light'])}>

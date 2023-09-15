@@ -13,19 +13,19 @@ const firebaseConfig = {
 
 const databaseURL = firebaseConfig.databaseURL;
 
-export const getProjectsCollection = async (lng = 'en') => {
+export const getProjectsCollection = async lng => {
   const response = await axios.get(`${databaseURL}/portfolio-${lng}.json`);
   return response.data;
 };
 
-export const getProject = async (lng = 'en', projectId) => {
+export const getProject = async (lng, projectId) => {
   const response = await axios.get(
     `${databaseURL}/portfolio-${lng}/${projectId}.json`
   );
   return response.data;
 };
 
-export const getSkillsCollection = async (lng = 'en') => {
+export const getSkillsCollection = async lng => {
   const response = await axios.get(`${databaseURL}/skills-${lng}.json`);
   return response.data;
 };

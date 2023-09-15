@@ -14,13 +14,15 @@ const SectionSkills = () => {
   useEffect(() => {
     (async () => {
       try {
-        const skills = await APIFireBase.getSkillsCollection(i18n.language);
+        const skills = await APIFireBase.getSkillsCollection(
+          i18n.resolvedLanguage
+        );
         setData(skills);
       } catch (error) {
         alert(error.message);
       }
     })();
-  }, [i18n.language]);
+  }, [i18n.resolvedLanguage]);
 
   return (
     <section className={clsx(scss.skills, theme && scss['skills-light'])}>
