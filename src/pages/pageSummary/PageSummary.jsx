@@ -1,11 +1,12 @@
-import SectionSummary from "../../components/sectionSummary";
+import { useEffect } from 'react';
+import SectionSummary from '../../components/sectionSummary';
 
 const PageSummary = () => {
-  return (
-    <>
-      <SectionSummary />
-    </>
-  );
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return <SectionSummary />;
 };
 
 export default PageSummary;
