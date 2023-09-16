@@ -5,12 +5,6 @@
   margin-left: 20px;
 }
 
-.label-switch-input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .switch-input {
   position: relative;
   width: 45px;
@@ -23,7 +17,7 @@
   transition: 250ms;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 20px;
     height: 20px;
