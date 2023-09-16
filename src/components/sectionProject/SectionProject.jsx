@@ -1,37 +1,20 @@
-import { useContext, useEffect, useRef, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useContext, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
-import * as APIFirebase from '../../services/APIFirebase';
 import clsx from 'clsx';
 import icons from '../../assets/icons/icons.svg';
 import scss from './SectionProject.module.scss';
 
-const SectionProject = () => {
+const SectionProject = ({ project }) => {
   const { theme } = useContext(Context);
-  const { projectId } = useParams();
-  const [collection, setCollection] = useState({});
-  const { t, i18n } = useTranslation();
-
+  const { t } = useTranslation();
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
   const scrollPosition = useRef(location.state?.scrollPosition?.current || 0);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    (async () => {
-      try {
-        const project = await APIFirebase.getProject(
-          i18n.resolvedLanguage,
-          projectId
-        );
-        setCollection(project);
-      } catch (error) {
-        alert(error.message);
-      }
-    })();
-  }, [i18n.resolvedLanguage, projectId]);
+  const { image, name, text, githubLink, livePageLink, tag } = project;
 
   return (
     <section className={clsx(scss.project, theme && scss['project-light'])}>
@@ -48,18 +31,18 @@ const SectionProject = () => {
         <div className={scss.content}>
           <img
             className={scss.image}
-            src={collection.image}
-            alt={`${collection.name} site preview`}
+            src={image}
+            alt={`${name} site preview`}
             width={500}
             height={500}
           />
 
           <div>
-            <p className={scss.text}>{collection.text}</p>
+            <p className={scss.text}>{text}</p>
             <div className={scss.blockLinks}>
               <a
                 className={scss.link}
-                href={collection.githubLink}
+                href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
@@ -67,11 +50,11 @@ const SectionProject = () => {
               </a>
               <a
                 className={scss.link}
-                href={collection.livePageLink}
+                href={livePageLink}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
               >
-                {t('site')} {collection.tag}
+                {t('site')} {tag}
               </a>
             </div>
           </div>
@@ -79,6 +62,17 @@ const SectionProject = () => {
       </div>
     </section>
   );
+};
+
+SectionProject.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    text: PropTypes.string,
+    githubLink: PropTypes.string,
+    livePageLink: PropTypes.string,
+    tag: PropTypes.string,
+  }).isRequired,
 };
 
 export default SectionProject;

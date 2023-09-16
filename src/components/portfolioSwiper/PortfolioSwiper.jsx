@@ -1,40 +1,24 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Context } from '../../context/Context';
-import * as APIFirebase from '../../services/APIFirebase';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import clsx from 'clsx';
-import { useTranslation } from 'react-i18next';
 import arrowLeft from '../../assets/icons/icons.svg';
 import arrowRight from '../../assets/icons/icons.svg';
 import scss from './PortfolioSwiper.module.scss';
 
-const PortfolioSwiper = () => {
+const PortfolioSwiper = ({ projects }) => {
   const { theme } = useContext(Context);
-  const [collection, setCollection] = useState([]);
   const scrollPositionRef = useRef(0);
   const location = useLocation();
   const saveScroll = location?.state?.scroll?.current || 0;
-  const { i18n } = useTranslation();
 
   const handleScroll = () => {
     scrollPositionRef.current = window.scrollY;
   };
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const projects = await APIFirebase.getProjectsCollection(
-          i18n.resolvedLanguage
-        );
-        setCollection(projects);
-      } catch (error) {
-        alert(error.message);
-      }
-    })();
-  }, [i18n.resolvedLanguage]);
 
   useEffect(() => {
     window.scrollTo(0, saveScroll);
@@ -57,7 +41,7 @@ const PortfolioSwiper = () => {
       }}
       className={`${scss.mySwiper}`}
     >
-      {collection.map(({ id, name, image, text }) => (
+      {projects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
           <div className={clsx(scss.content, theme && scss['content-light'])}>
             <div>
@@ -66,6 +50,7 @@ const PortfolioSwiper = () => {
                 src={image}
                 alt={`${name} site preview`}
                 width={500}
+                height={500}
               />
             </div>
 
@@ -98,6 +83,17 @@ const PortfolioSwiper = () => {
       </div>
     </Swiper>
   );
+};
+
+PortfolioSwiper.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default PortfolioSwiper;

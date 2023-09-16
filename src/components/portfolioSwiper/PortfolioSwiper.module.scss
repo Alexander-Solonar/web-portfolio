@@ -22,15 +22,18 @@
     var(--secondary-black-color) 100%
   );
 
-  @media screen and (max-width: 1112px) {
+  @media screen and (max-width: 1130px) {
     justify-content: center;
-    width: 65%;
-    padding: 20px;
+    width: 75%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px 20px;
   }
 
   @media screen and (max-width: 767px) {
-    justify-content: center;
     width: 90%;
+    padding: 20px;
   }
 }
 

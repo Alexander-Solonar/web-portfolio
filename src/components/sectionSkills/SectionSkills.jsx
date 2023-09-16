@@ -1,28 +1,14 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Context } from '../../context/Context';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
-import * as APIFireBase from '../../services/APIFirebase';
 import CardSkills from '../cardSkills';
 import scss from './SectionSkills.module.scss';
 
-const SectionSkills = () => {
+const SectionSkills = ({ data }) => {
   const { theme } = useContext(Context);
-  const [data, setData] = useState([]);
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const skills = await APIFireBase.getSkillsCollection(
-          i18n.resolvedLanguage
-        );
-        setData(skills);
-      } catch (error) {
-        alert(error.message);
-      }
-    })();
-  }, [i18n.resolvedLanguage]);
+  const { t } = useTranslation();
 
   return (
     <section className={clsx(scss.skills, theme && scss['skills-light'])}>
@@ -32,7 +18,7 @@ const SectionSkills = () => {
           <ul className={scss.list}>
             {data.map(element => (
               <li key={element.id} className={scss.item}>
-                <CardSkills data={element} />
+                <CardSkills skill={element} />
               </li>
             ))}
           </ul>
@@ -40,6 +26,14 @@ const SectionSkills = () => {
       </div>
     </section>
   );
+};
+
+SectionSkills.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default SectionSkills;

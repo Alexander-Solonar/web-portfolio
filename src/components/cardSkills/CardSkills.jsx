@@ -1,24 +1,24 @@
-import { useContext } from "react";
-import { Context } from "../../context/Context";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import icons from "../../assets/icons/icons.svg";
-import scss from "./CardSkills.module.scss";
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import icons from '../../assets/icons/icons.svg';
+import scss from './CardSkills.module.scss';
 
-const CardSkills = ({ data }) => {
+const CardSkills = ({ skill }) => {
   const { theme } = useContext(Context);
-  const { tag, name, description } = data;
+  const { tag, name, description } = skill;
 
   return (
     <div className={scss.card}>
-      <div className={clsx(scss.content, theme && scss["content-light"])}>
-        <div className={scss["content-front"]}>
+      <div className={clsx(scss.content, theme && scss['content-light'])}>
+        <div className={scss['content-front']}>
           <svg className={scss.icon} width="76" height="75">
             <use href={`${icons}#icon-${tag}`} />
           </svg>
           <p className={scss.title}>{name}</p>
         </div>
-        <div className={scss["content-back"]}>
+        <div className={scss['content-back']}>
           <p className={scss.text}>{description}</p>
         </div>
       </div>
