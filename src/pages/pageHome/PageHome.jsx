@@ -12,6 +12,10 @@ const PageHome = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    document.title = 'Portfolio | Home';
+  }, []);
+
+  useEffect(() => {
     (async () => {
       try {
         const skills = await APIFirebase.getSkillsCollection(

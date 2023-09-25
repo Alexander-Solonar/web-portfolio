@@ -10,6 +10,10 @@ const PageProject = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    document.title = `Portfolio | Project/${project.name}`;
+  }, [project.name]);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
 
     (async () => {

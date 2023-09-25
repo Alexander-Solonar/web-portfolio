@@ -8,6 +8,10 @@ const PagePortfolio = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
+    document.title = 'Portfolio | Gallery';
+  }, []);
+
+  useEffect(() => {
     window.scrollTo(0, 0);
 
     (async () => {

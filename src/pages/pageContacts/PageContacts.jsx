@@ -3,6 +3,7 @@ import SectionContacts from '../../components/sectionContacts';
 
 const PageContacts = () => {
   useEffect(() => {
+    document.title = 'Portfolio | Contacts';
     window.scrollTo(0, 0);
   }, []);
 
