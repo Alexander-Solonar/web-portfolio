@@ -1,12 +1,12 @@
 import { Suspense, useContext } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Context } from 'context/Context';
 import clsx from 'clsx';
 import AppBar from '../aapBar/AppBar';
 import Footer from '../footer/Footer';
 import MobileMenu from '../mobileMenu';
 import Loader from 'components/loader';
 import scss from './Layout.module.scss';
-import { Context } from 'context/Context';
 
 const Layout = () => {
   const { theme } = useContext(Context);

@@ -41,5 +41,13 @@
 
   "location": "Odesa, Ukraine",
   "summary": "Open",
-  "site": "site"
+  "site": "site",
+
+  "title": {
+    "main": "Solonar Oleksandr Portfolio",
+    "gallery": "Gallery | Solonar Oleksandr  Portfolio",
+    "contacts": "Contacts | Solonar Oleksandr  Portfolio",
+    "summary": "Summary | Solonar Oleksandr  Portfolio",
+    "project": "Project"
+  }
 }
