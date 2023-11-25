@@ -1,21 +1,10 @@
 .aboutMe {
   min-height: 1096px;
-  background-image: linear-gradient(
-    90deg,
-    var(--primary-black-color) 0%,
-    var(--secondary-black-color) 100%
-  );
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: var(--primary-black-color);
 }
 
 .aboutMe-light {
-  background-image: linear-gradient(
-    90deg,
-    var(--secondary-white-color) 0%,
-    var(--primary-white-color) 100%
-  );
+  background-color: var(--primary-white-color);
 }
 
 .content {
@@ -34,7 +23,7 @@
   color: var(--primary-white-color);
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     right: -210px;
     bottom: -100px;
@@ -71,7 +60,7 @@
   line-height: 1.34;
   letter-spacing: 0.2px;
   z-index: 2;
-  background: var(--secondary-black-color);
+  background-color: var(--secondary-black-color);
 
   @media screen and (max-width: 767px) {
     padding: 63px 30px;
@@ -79,7 +68,7 @@
 }
 
 .text-light {
-  background: var(--primary-white-color);
+  background-color: var(--secondary-white-color);
 }
 
 .block-image {
@@ -89,7 +78,7 @@
   left: -40px;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -20px;
     left: -100px;
@@ -119,9 +108,9 @@
   max-height: 606px;
   border-radius: 14px;
   z-index: 5;
-  background: var(--secondary-black-color);
+  background-color: var(--secondary-black-color);
 }
 
 .image-light {
-  background: var(--primary-white-color);
+  background-color: var(--secondary-white-color);
 }

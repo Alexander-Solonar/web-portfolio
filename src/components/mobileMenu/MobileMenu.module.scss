@@ -10,13 +10,9 @@
   fill: var(--primary-white-color);
 
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-image: linear-gradient(
-    123deg,
-    var(--primary-black-color) 0%,
-    var(--secondary-black-color) 100%
-  );
+  background-color: var(--secondary-black-color);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 831px) {
     display: none;
   }
 }
@@ -24,12 +20,7 @@
 .content-light {
   color: var(--primary-black-color);
   fill: var(--primary-black-color);
-
-  background-image: linear-gradient(
-    123deg,
-    var(--secondary-white-color) 0%,
-    var(--primary-white-color) 100%
-  );
+  background-color: var(--secondary-white-color);
 }
 
 .is-open {

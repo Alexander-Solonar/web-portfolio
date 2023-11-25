@@ -1,7 +1,5 @@
-import { Suspense, useContext } from 'react';
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Context } from 'context/Context';
-import clsx from 'clsx';
 import AppBar from '../aapBar/AppBar';
 import Footer from '../footer/Footer';
 import MobileMenu from '../mobileMenu';
@@ -9,14 +7,12 @@ import Loader from 'components/loader';
 import scss from './Layout.module.scss';
 
 const Layout = () => {
-  const { theme } = useContext(Context);
-
   return (
     <div className={scss.wrapper}>
       <header>
         <AppBar />
       </header>
-      <main className={clsx(scss.main, theme && scss['main-light'])}>
+      <main className={scss.main}>
         <Suspense className={scss.suspense} fallback={<Loader />}>
           <Outlet />
         </Suspense>

@@ -1,28 +1,26 @@
-import { useContext } from "react";
-import { Context } from "../../context/Context";
-import clsx from "clsx";
-import Navigation from "../navigation/Navigation";
-import scss from "./MobileMenu.module.scss";
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
+import clsx from 'clsx';
+import Navigation from '../navigation/Navigation';
+import scss from './MobileMenu.module.scss';
 
 const MobileMenu = () => {
-  const { theme } = useContext(Context);
-  const { isOpenMenu } = useContext(Context);
-  const { setIsOpenMenu } = useContext(Context);
+  const { theme, isOpenMenu, setIsOpenMenu } = useContext(Context);
 
-  const handleClickCloseMenu = (e) => {
-    if (e.target.nodeName === "A") setIsOpenMenu(false);
+  const handleClickCloseMenu = e => {
+    if (e.target.nodeName === 'A') setIsOpenMenu(false);
   };
 
   return (
     <div
       className={clsx(
         scss.content,
-        isOpenMenu && scss["is-open"],
-        theme && scss["content-light"]
+        isOpenMenu && scss['is-open'],
+        theme && scss['content-light']
       )}
       onClick={handleClickCloseMenu}
     >
-      <Navigation classNameList={"list-mobile-menu"} />
+      <Navigation classNameList={'list-mobile-menu'} />
     </div>
   );
 };

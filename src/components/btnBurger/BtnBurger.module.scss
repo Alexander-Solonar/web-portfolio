@@ -1,4 +1,4 @@
-.button-burger {
+.burger-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,4 +11,8 @@
   &:hover {
     fill: var(--primary-blue-color);
   }
+}
+
+.open-menu {
+  fill: var(--primary-blue-color);
 }
