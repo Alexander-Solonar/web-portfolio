@@ -2,20 +2,12 @@
   flex: 1;
   padding: 40px 0;
   color: var(--primary-white-color);
-  background-image: linear-gradient(
-    90deg,
-    var(--secondary-black-color) 0%,
-    var(--primary-gray-color) 100%
-  );
+  background-color: var(--secondary-black-color);
 }
 
 .gallery-light {
   color: var(--primary-black-color);
-  background-image: linear-gradient(
-    90deg,
-    var(--third-white-color) 0%,
-    var(--secondary-white-color) 100%
-  );
+  background-color: var(--secondary-white-color);
 }
 
 .list {
@@ -48,7 +40,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     box-sizing: border-box;
     top: 0;
