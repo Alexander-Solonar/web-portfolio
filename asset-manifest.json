@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.ee74cdbf.css",
-    "main.js": "/web-portfolio/static/js/main.b5500f28.js",
-    "static/css/986.bf8c7b81.chunk.css": "/web-portfolio/static/css/986.bf8c7b81.chunk.css",
+    "main.css": "/web-portfolio/static/css/main.10d55765.css",
+    "main.js": "/web-portfolio/static/js/main.d462b731.js",
+    "static/css/986.03a1dbb6.chunk.css": "/web-portfolio/static/css/986.03a1dbb6.chunk.css",
     "static/js/986.f4b6cb23.chunk.js": "/web-portfolio/static/js/986.f4b6cb23.chunk.js",
     "static/css/331.5c7f72e4.chunk.css": "/web-portfolio/static/css/331.5c7f72e4.chunk.css",
     "static/js/331.856bf434.chunk.js": "/web-portfolio/static/js/331.856bf434.chunk.js",
@@ -27,9 +27,9 @@
     "static/media/roboto-v30-latin-300.woff2": "/web-portfolio/static/media/roboto-v30-latin-300.c48fb6765a9fcb00b330.woff2",
     "index.html": "/web-portfolio/index.html",
     "static/media/getFetch.cjs": "/web-portfolio/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.ee74cdbf.css.map": "/web-portfolio/static/css/main.ee74cdbf.css.map",
-    "main.b5500f28.js.map": "/web-portfolio/static/js/main.b5500f28.js.map",
-    "986.bf8c7b81.chunk.css.map": "/web-portfolio/static/css/986.bf8c7b81.chunk.css.map",
+    "main.10d55765.css.map": "/web-portfolio/static/css/main.10d55765.css.map",
+    "main.d462b731.js.map": "/web-portfolio/static/js/main.d462b731.js.map",
+    "986.03a1dbb6.chunk.css.map": "/web-portfolio/static/css/986.03a1dbb6.chunk.css.map",
     "986.f4b6cb23.chunk.js.map": "/web-portfolio/static/js/986.f4b6cb23.chunk.js.map",
     "331.5c7f72e4.chunk.css.map": "/web-portfolio/static/css/331.5c7f72e4.chunk.css.map",
     "331.856bf434.chunk.js.map": "/web-portfolio/static/js/331.856bf434.chunk.js.map",
@@ -44,7 +44,7 @@
     "891.7bcd7485.chunk.js.map": "/web-portfolio/static/js/891.7bcd7485.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee74cdbf.css",
-    "static/js/main.b5500f28.js"
+    "static/css/main.10d55765.css",
+    "static/js/main.d462b731.js"
   ]
 }
