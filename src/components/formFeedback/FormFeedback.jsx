@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
 import { useTranslation } from 'react-i18next';
+import { SendMessageTg } from 'services/SendMessageTg';
+import { SendMessageEmail } from 'services/SendMessageEmail';
 import Notiflix from 'notiflix';
 import scss from './FormFeedback.module.scss';
 
@@ -34,22 +36,12 @@ const FormFeedback = () => {
   };
 
   const handleSubmit = async (values, actions) => {
-    try {
-      setButtonDisabled(true);
-      actions.resetForm();
-      Notiflix.Notify.success(notifySuccess);
-      await fetch('https://my-portfolio-gytx.onrender.com/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
-    } catch (error) {
-      Notiflix.Notify.failure(error.message);
-    } finally {
-      setButtonDisabled(false);
-    }
+    setButtonDisabled(true);
+    actions.resetForm();
+    Notiflix.Notify.success(notifySuccess);
+    SendMessageEmail(values);
+    SendMessageTg(values);
+    setButtonDisabled(false);
   };
 
   return (
