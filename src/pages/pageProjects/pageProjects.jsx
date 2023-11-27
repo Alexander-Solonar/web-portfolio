@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as APIFirebase from '../../services/APIFirebase';
-import SectionGallery from '../../components/sectionGallery/SectionGallery';
+import SectionProjects from 'components/sectionProjects';
 
-const PagePortfolio = () => {
+const PageProjects = () => {
   const [projectsCollection, setProjectsCollection] = useState([]);
   const { i18n, t } = useTranslation();
   const lng = i18n.resolvedLanguage;
@@ -27,9 +27,9 @@ const PagePortfolio = () => {
 
   return (
     <>
-      <SectionGallery data={projectsCollection} />
+      <SectionProjects data={projectsCollection} />
     </>
   );
 };
 
-export default PagePortfolio;
+export default PageProjects;

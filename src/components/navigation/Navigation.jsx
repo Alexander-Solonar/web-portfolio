@@ -21,8 +21,8 @@ const Navigation = ({ classNameList }) => {
         </li>
 
         <li>
-          <NavLink className={linkClassName} to="/gallery">
-            {t('header.gallery')}
+          <NavLink className={linkClassName} to="/projects">
+            {t('header.projects')}
           </NavLink>
         </li>
         <li>

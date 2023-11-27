@@ -59,7 +59,7 @@ const PortfolioSwiper = ({ projects }) => {
               <p className={scss.text}>{text.slice(0, 400) + '...'}</p>
               <Link
                 className={scss.link}
-                to={`/gallery/project/${id}`}
+                to={`/projects/project/${id}`}
                 state={{
                   from: location,
                   scrollPosition: scrollPositionRef,
