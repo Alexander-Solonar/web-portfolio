@@ -2,9 +2,9 @@ import { useContext } from 'react';
 import { Context } from '../../context/Context';
 import clsx from 'clsx';
 import icons from '../../assets/icons/icons.svg';
-import scss from './BtnBurger.module.scss';
+import scss from './BurgerButton.module.scss';
 
-const BtnBurger = () => {
+const BurgerButton = () => {
   const { isOpenMenu, setIsOpenMenu } = useContext(Context);
 
   const handleClick = () => {
@@ -22,4 +22,4 @@ const BtnBurger = () => {
   );
 };
 
-export default BtnBurger;
+export default BurgerButton;

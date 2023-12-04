@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { Context } from '../../context/Context';
 import icons from '../../assets/icons/icons.svg';
-import scss from './BtnTheme.module.scss';
+import scss from './ThemeSwitchButton.module.scss';
 
-const BtnTheme = () => {
+const ThemeSwitchButton = () => {
   const { setTheme } = useContext(Context);
   const { theme } = useContext(Context);
 
@@ -29,4 +29,4 @@ const BtnTheme = () => {
   );
 };
 
-export default BtnTheme;
+export default ThemeSwitchButton;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import scss from './BtnLanguage.module.scss';
 import clsx from 'clsx';
+import scss from './LangSwitchButton.module.scss';
 
-const BtnLanguage = () => {
+const LangSwitchButton = () => {
   const { i18n } = useTranslation();
 
   const changeLanguage = lng => {
@@ -35,4 +35,4 @@ const BtnLanguage = () => {
   );
 };
 
-export default BtnLanguage;
+export default LangSwitchButton;

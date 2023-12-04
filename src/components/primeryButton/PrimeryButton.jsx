@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import scss from './BtnConnection.module.scss';
+import scss from './PrimeryButton.module.scss';
 
-const BtnConnection = () => {
+const PrimeryButton = () => {
   const { t } = useTranslation();
 
   return (
@@ -12,4 +12,4 @@ const BtnConnection = () => {
   );
 };
 
-export default BtnConnection;
+export default PrimeryButton;

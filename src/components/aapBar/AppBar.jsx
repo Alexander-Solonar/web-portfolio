@@ -4,15 +4,14 @@ import throttle from 'lodash.throttle';
 import clsx from 'clsx';
 import Logo from '../logo';
 import Navigation from '../navigation';
-import BtnBurger from '../btnBurger';
-import BtnTheme from '../btnTheme';
-import BtnLanguage from '../btnLanguage';
+import BurgerButton from '../burgerButton';
+import ThemeSwitchButton from '../themeSwitchButton';
+import LangSwitchButton from '../langSwitchButton';
 import scss from './AppBar.module.scss';
 
 const AppBar = () => {
+  const { theme, setIsOpenMenu } = useContext(Context);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const { theme } = useContext(Context);
-  const { setIsOpenMenu } = useContext(Context);
 
   useEffect(() => {
     const handleResize = throttle(() => {
@@ -34,9 +33,9 @@ const AppBar = () => {
           <Logo />
           <div className={scss.box}>
             {windowWidth > 830 && <Navigation classNameList={'list'} />}
-            {windowWidth < 831 && <BtnBurger />}
-            <BtnLanguage />
-            <BtnTheme />
+            {windowWidth < 831 && <BurgerButton />}
+            <LangSwitchButton />
+            <ThemeSwitchButton />
           </div>
         </div>
       </div>
