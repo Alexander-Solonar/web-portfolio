@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { Context } from '../../context/Context';
 import clsx from 'clsx';
 import scss from './SectionProjects.module.scss';
@@ -36,16 +35,6 @@ const SectionProjects = ({ data }) => {
       </div>
     </section>
   );
-};
-
-SectionProjects.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      imgProject: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default SectionProjects;

@@ -1,11 +1,15 @@
-import { useContext } from 'react';
+import { FC, useContext } from 'react';
 import { Context } from '../../context/Context';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import icons from '../../assets/icons/icons.svg';
 import scss from './CardSkills.module.scss';
+import { Skill } from '../../interfaces';
 
-const CardSkills = ({ skill }) => {
+interface CardSkillsProps {
+  skill: Skill;
+}
+
+const CardSkills: FC<CardSkillsProps> = ({ skill }) => {
   const { theme } = useContext(Context);
   const { tag, name, description } = skill;
 
@@ -27,11 +31,3 @@ const CardSkills = ({ skill }) => {
 };
 
 export default CardSkills;
-
-CardSkills.propTypes = {
-  data: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }),
-};

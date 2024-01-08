@@ -5,12 +5,13 @@ import SectionAboutMe from '../../components/sectionAboutMe/SectionAboutMe';
 import SectionHero from '../../components/sectionHero';
 import SectionPortfolio from '../../components/sectionPortfolio';
 import SectionSkills from '../../components/sectionSkills';
+import { Project, Skill } from '../../interfaces';
 
 const PageHome = () => {
-  const [skillsCollection, setSkillsCollection] = useState([]);
-  const [projectsCollection, setProjectsCollection] = useState([]);
+  const [skillsCollection, setSkillsCollection] = useState<Skill[]>([]);
+  const [projectsCollection, setProjectsCollection] = useState<Project[]>([]);
   const { i18n, t } = useTranslation();
-  const lng = i18n.resolvedLanguage;
+  const lng = i18n.resolvedLanguage as string;
 
   useEffect(() => {
     document.title = t('title.main');
@@ -23,7 +24,7 @@ const PageHome = () => {
         setSkillsCollection(skills);
         const projects = await APIFirebase.getProjectsCollection(lng);
         setProjectsCollection(projects);
-      } catch (error) {
+      } catch (error: any) {
         alert(error.message);
       }
     })();

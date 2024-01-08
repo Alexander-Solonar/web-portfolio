@@ -3,9 +3,9 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import ContextProvider from '../context/Context';
 import Layout from './layout';
 
-const PageHome = lazy(() => import('../pages/pageHome/PageHome.jsx'));
+const PageHome = lazy(() => import('../pages/pageHome/PageHome'));
 const PageProjects = lazy(() => import('../pages/pageProjects/pageProjects'));
-const PageProject = lazy(() => import('../pages/pageProject/PageProject.jsx'));
+const PageProject = lazy(() => import('../pages/pageProject/PageProject'));
 const PageContacts = lazy(() => import('../pages/pageContacts/PageContacts'));
 const PageSummary = lazy(() => import('../pages/pageSummary/PageSummary'));
 

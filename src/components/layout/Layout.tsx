@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import AppBar from '../aapBar/AppBar';
 import Footer from '../footer/Footer';
 import MobileMenu from '../mobileMenu';
-import Loader from 'components/loader';
+import Loader from '../loader';
 import scss from './Layout.module.scss';
 
 const Layout = () => {
@@ -13,7 +13,7 @@ const Layout = () => {
         <AppBar />
       </header>
       <main className={scss.main}>
-        <Suspense className={scss.suspense} fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

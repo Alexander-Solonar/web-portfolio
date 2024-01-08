@@ -3,12 +3,24 @@ import * as APIFirebase from '../../services/APIFirebase';
 import { useTranslation } from 'react-i18next';
 import SectionProject from '../../components/sectionProject/SectionProject';
 import { useParams } from 'react-router-dom';
+import { Project } from '../../interfaces';
+
+const initialProject: Project = {
+  githubLink: '',
+  id: null,
+  image: '',
+  imgProject: '',
+  livePageLink: '',
+  name: '',
+  tag: '',
+  text: '',
+};
 
 const PageProject = () => {
-  const { projectId } = useParams();
-  const [project, setProject] = useState({});
+  const { projectId } = useParams<{ projectId?: string }>();
+  const [project, setProject] = useState<Project>(initialProject);
   const { i18n, t } = useTranslation();
-  const lng = i18n.resolvedLanguage;
+  const lng = i18n.resolvedLanguage as string;
 
   useEffect(() => {
     document.title = `${t('title.project')} - ${project.name} | ${t(
@@ -21,9 +33,9 @@ const PageProject = () => {
 
     (async () => {
       try {
-        const project = await APIFirebase.getProject(lng, projectId);
+        const project = await APIFirebase.getProject(lng, projectId!);
         setProject(project);
-      } catch (error) {
+      } catch (error: any) {
         alert(error.message);
       }
     })();

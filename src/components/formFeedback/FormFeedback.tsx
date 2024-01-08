@@ -1,13 +1,18 @@
-import { useState } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { FC, useState } from 'react';
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import { object, string } from 'yup';
 import { useTranslation } from 'react-i18next';
-import { SendMessageTg } from 'services/SendMessageTg';
-import { SendMessageEmail } from 'services/SendMessageEmail';
+import { SendMessageTg } from '../../services/SendMessageTg';
+import { SendMessageEmail } from '../../services/SendMessageEmail';
+import { FormFeedbackValues } from '../../interfaces';
 import Notiflix from 'notiflix';
 import scss from './FormFeedback.module.scss';
 
-const FormError = ({ name }) => {
+interface FormErrorProps {
+  name: string;
+}
+
+const FormError: FC<FormErrorProps> = ({ name }) => {
   return (
     <ErrorMessage
       name={name}
@@ -35,7 +40,10 @@ const FormFeedback = () => {
     message: '',
   };
 
-  const handleSubmit = async (values, actions) => {
+  const handleSubmit = async (
+    values: FormFeedbackValues,
+    actions: FormikHelpers<FormFeedbackValues>
+  ) => {
     setButtonDisabled(true);
     actions.resetForm();
     Notiflix.Notify.success(notifySuccess);

@@ -8,6 +8,11 @@
   color: inherit;
   overflow: hidden;
   animation: showBnt 1s forwards;
+  transition: color 250ms ease-in-out;
+
+  &:hover {
+    color: var(--primary-black-color);
+  }
 
   &::before {
     content: '';

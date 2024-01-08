@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import * as APIFirebase from '../../services/APIFirebase';
-import SectionProjects from 'components/sectionProjects';
+import SectionProjects from '../../components/sectionProjects';
+import { Project } from '../../interfaces';
 
 const PageProjects = () => {
-  const [projectsCollection, setProjectsCollection] = useState([]);
+  const [projectsCollection, setProjectsCollection] = useState<Project[]>([]);
   const { i18n, t } = useTranslation();
-  const lng = i18n.resolvedLanguage;
+  const lng = i18n.resolvedLanguage as string;
 
   useEffect(() => {
     document.title = t('title.gallery');
@@ -19,7 +20,7 @@ const PageProjects = () => {
       try {
         const projects = await APIFirebase.getProjectsCollection(lng);
         setProjectsCollection(projects);
-      } catch (error) {
+      } catch (error: any) {
         alert(error.message);
       }
     })();
