@@ -1,13 +1,17 @@
-import { useContext, useRef } from 'react';
+import { FC, useContext, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { Context } from '../../context/Context';
+import { Project } from '../../interfaces';
 import clsx from 'clsx';
 import icons from '../../assets/icons/icons.svg';
 import scss from './SectionProject.module.scss';
 
-const SectionProject = ({ project }) => {
+interface SectionProjectProps {
+  project: Project;
+}
+
+const SectionProject: FC<SectionProjectProps> = ({ project }) => {
   const { theme } = useContext(Context);
   const { t } = useTranslation();
   const location = useLocation();
@@ -62,17 +66,6 @@ const SectionProject = ({ project }) => {
       </div>
     </section>
   );
-};
-
-SectionProject.propTypes = {
-  project: PropTypes.shape({
-    image: PropTypes.string,
-    name: PropTypes.string,
-    text: PropTypes.string,
-    githubLink: PropTypes.string,
-    livePageLink: PropTypes.string,
-    tag: PropTypes.string,
-  }).isRequired,
 };
 
 export default SectionProject;

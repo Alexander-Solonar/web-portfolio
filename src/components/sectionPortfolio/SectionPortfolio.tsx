@@ -1,12 +1,16 @@
-import { useContext } from 'react';
+import { FC, useContext } from 'react';
 import { Context } from '../../context/Context';
 import { useTranslation } from 'react-i18next';
-import PropTypes from 'prop-types';
+import { Project } from '../../interfaces';
 import clsx from 'clsx';
 import PortfolioSwiper from '../portfolioSwiper/';
 import scss from './SectionPortfolio.module.scss';
 
-const SectionPortfolio = ({ data }) => {
+interface SectionPortfolioProps {
+  data: Project[];
+}
+
+const SectionPortfolio: FC<SectionPortfolioProps> = ({ data }) => {
   const { theme } = useContext(Context);
   const { t } = useTranslation();
 
@@ -20,10 +24,6 @@ const SectionPortfolio = ({ data }) => {
       </div>
     </section>
   );
-};
-
-SectionPortfolio.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default SectionPortfolio;

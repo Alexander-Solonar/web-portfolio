@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { ChangeEvent, useContext } from 'react';
 import { Context } from '../../context/Context';
 import icons from '../../assets/icons/icons.svg';
 import scss from './ThemeSwitchButton.module.scss';
@@ -7,7 +7,7 @@ const ThemeSwitchButton = () => {
   const { setTheme } = useContext(Context);
   const { theme } = useContext(Context);
 
-  const handleCheckboxChange = event => {
+  const handleCheckboxChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTheme(event.target.checked);
   };
 

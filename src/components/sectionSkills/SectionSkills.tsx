@@ -1,12 +1,16 @@
-import { useContext } from 'react';
-import PropTypes from 'prop-types';
+import { FC, useContext } from 'react';
 import { Context } from '../../context/Context';
 import { useTranslation } from 'react-i18next';
+import { Skill } from '../../interfaces';
 import clsx from 'clsx';
 import CardSkills from '../cardSkills';
 import scss from './SectionSkills.module.scss';
 
-const SectionSkills = ({ data }) => {
+interface SectionSkillsProps {
+  data: Skill[];
+}
+
+const SectionSkills: FC<SectionSkillsProps> = ({ data }) => {
   const { theme } = useContext(Context);
   const { t } = useTranslation();
 
@@ -26,14 +30,6 @@ const SectionSkills = ({ data }) => {
       </div>
     </section>
   );
-};
-
-SectionSkills.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    })
-  ).isRequired,
 };
 
 export default SectionSkills;

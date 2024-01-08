@@ -1,16 +1,20 @@
-import { useContext, useEffect, useRef } from 'react';
+import { FC, useContext, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { Context } from '../../context/Context';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { Project } from '../../interfaces';
 import 'swiper/css';
 import clsx from 'clsx';
 import arrowLeft from '../../assets/icons/icons.svg';
 import arrowRight from '../../assets/icons/icons.svg';
 import scss from './PortfolioSwiper.module.scss';
 
-const PortfolioSwiper = ({ projects }) => {
+interface PortfolioSwiperProps {
+  projects: Project[];
+}
+
+const PortfolioSwiper: FC<PortfolioSwiperProps> = ({ projects }) => {
   const { theme } = useContext(Context);
   const scrollPositionRef = useRef(0);
   const location = useLocation();
@@ -83,17 +87,6 @@ const PortfolioSwiper = ({ projects }) => {
       </div>
     </Swiper>
   );
-};
-
-PortfolioSwiper.propTypes = {
-  projects: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 
 export default PortfolioSwiper;

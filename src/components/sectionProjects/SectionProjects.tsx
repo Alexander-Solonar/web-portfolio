@@ -1,10 +1,15 @@
-import { useContext } from 'react';
+import { FC, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import { Project } from '../../interfaces';
 import clsx from 'clsx';
 import scss from './SectionProjects.module.scss';
 
-const SectionProjects = ({ data }) => {
+interface SectionProjectsProps {
+  data: Project[];
+}
+
+const SectionProjects: FC<SectionProjectsProps> = ({ data }) => {
   const { theme } = useContext(Context);
   const location = useLocation();
 

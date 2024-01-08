@@ -1,16 +1,23 @@
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import scss from './Navigation.module.scss';
 
-const Navigation = ({ classNameList }) => {
+interface NavigationProps {
+  classNameList: string;
+}
+
+interface Active {
+  isActive: boolean;
+}
+
+const Navigation: FC<NavigationProps> = ({ classNameList }) => {
   const { t } = useTranslation();
 
-  const linkClassName = ({ isActive }) => {
+  const linkClassName = ({ isActive }: Active) => {
     const className = isActive ? scss.active : scss.link;
     return className;
   };
-
   return (
     <nav className={scss.nav}>
       <ul className={scss[`${classNameList}`]}>
@@ -41,7 +48,3 @@ const Navigation = ({ classNameList }) => {
 };
 
 export default Navigation;
-
-Navigation.propTypes = {
-  classNameList: PropTypes.string.isRequired,
-};
