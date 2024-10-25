@@ -5,7 +5,7 @@ import Navigation from '../navigation/Navigation';
 import scss from './MobileMenu.module.scss';
 
 const MobileMenu = () => {
-  const { theme, isOpenMenu, setIsOpenMenu } = useContext(Context);
+  const { isOpenMenu, setIsOpenMenu } = useContext(Context);
 
   const handleClickCloseMenu = (e: MouseEvent<HTMLDivElement>) => {
     if ((e.target as HTMLElement).nodeName === 'A') setIsOpenMenu(false);
@@ -13,14 +13,10 @@ const MobileMenu = () => {
 
   return (
     <div
-      className={clsx(
-        scss.content,
-        isOpenMenu && scss['is-open'],
-        theme && scss['content-light']
-      )}
+      className={clsx(scss['content'], isOpenMenu && scss['is-open'])}
       onClick={handleClickCloseMenu}
     >
-      <Navigation classNameList={'list-mobile-menu'} />
+      <Navigation classNameList={'mobile-nav'} />
     </div>
   );
 };

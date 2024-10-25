@@ -1,17 +1,13 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Context } from '../../context/Context';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, EffectCreative } from 'swiper/modules';
 import 'swiper/css';
-import clsx from 'clsx';
-import arrowLeft from '../../assets/icons/icons.svg';
-import arrowRight from '../../assets/icons/icons.svg';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-creative';
 import scss from './PortfolioSwiper.module.scss';
-
 const PortfolioSwiper = ({ projects }) => {
-  const { theme } = useContext(Context);
   const scrollPositionRef = useRef(0);
   const location = useLocation();
   const saveScroll = location?.state?.scroll?.current || 0;
@@ -34,25 +30,30 @@ const PortfolioSwiper = ({ projects }) => {
     <Swiper
       speed={800}
       loop={true}
-      modules={[Navigation]}
-      navigation={{
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+      navigation={true}
+      modules={[Navigation, EffectCreative]}
+      grabCursor={true}
+      effect={'creative'}
+      creativeEffect={{
+        prev: {
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ['100%', 0, 0],
+        },
       }}
       className={`${scss.mySwiper}`}
     >
       {projects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
-          <div className={clsx(scss.content, theme && scss['content-light'])}>
-            <div>
-              <img
-                className={scss.image}
-                src={image}
-                alt={`${name} site preview`}
-                width={500}
-                height={500}
-              />
-            </div>
+          <div className={scss.content}>
+            <img
+              className={scss.image}
+              src={image}
+              alt={`${name} site preview`}
+              width={500}
+              height={500}
+            />
 
             <div className={scss.desc}>
               <h3 className={scss.title}>{name}</h3>
@@ -71,16 +72,6 @@ const PortfolioSwiper = ({ projects }) => {
           </div>
         </SwiperSlide>
       ))}
-      <div className="swiper-button-prev">
-        <svg width={36} height={36}>
-          <use href={`${arrowLeft}#icon-arrow-left`} />
-        </svg>
-      </div>
-      <div className="swiper-button-next">
-        <svg width={36} height={36}>
-          <use href={`${arrowRight}#icon-arrow-right`} />
-        </svg>
-      </div>
     </Swiper>
   );
 };

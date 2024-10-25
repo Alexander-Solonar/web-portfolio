@@ -1,6 +1,5 @@
 .content {
   display: flex;
-  align-items: center;
   margin-right: 10px;
 
   @media (max-width: 390px) {
@@ -17,18 +16,20 @@
   color: inherit;
   background-color: transparent;
   border: none;
-
   @media (max-width: 390px) {
     font-size: 14px;
   }
 }
 
-.slash {
-  font-size: 16px;
+.button:first-child::after {
+  content: '/';
+  margin-left: 12px;
+  color: var(--third-white-color);
   @media (max-width: 390px) {
     display: none;
   }
 }
+
 .active {
   color: var(--primary-blue-color);
 }

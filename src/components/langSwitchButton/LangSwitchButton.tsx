@@ -4,32 +4,26 @@ import scss from './LangSwitchButton.module.scss';
 
 const LangSwitchButton = () => {
   const { i18n } = useTranslation();
+  const languages = ['ua', 'en'];
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
 
   return (
-    <div className={scss.content}>
-      <button
-        className={clsx(
-          scss.button,
-          i18n.resolvedLanguage === 'ua' && scss.active
-        )}
-        onClick={() => changeLanguage('ua')}
-      >
-        UA
-      </button>
-      <span className={scss.slash}>/</span>
-      <button
-        className={clsx(
-          scss.button,
-          i18n.resolvedLanguage === 'en' && scss.active
-        )}
-        onClick={() => changeLanguage('en')}
-      >
-        EN
-      </button>
+    <div className={scss['content']}>
+      {languages.map(lang => (
+        <button
+          key={lang}
+          className={clsx(
+            scss['button'],
+            i18n.language === lang && scss['active']
+          )}
+          onClick={() => changeLanguage(lang)}
+        >
+          {lang.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 };

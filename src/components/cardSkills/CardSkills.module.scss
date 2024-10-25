@@ -1,22 +1,18 @@
 .card {
   height: 100%;
+  cursor: pointer;
   will-change: transform;
 }
 
 .content {
   position: relative;
   height: 100%;
-  border-radius: 19px;
+  border-radius: 5px;
   transition: transform 0.8s ease 0s;
   transform-style: preserve-3d;
   color: var(--primary-white-color);
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
-  background-color: var(--primary-black-color);
-}
-
-.content-light {
-  color: var(--primary-black-color);
-  background-color: var(--primary-white-color);
+  background-image: var(--gradient-background-secondary);
 }
 
 .card:hover .content {
@@ -34,7 +30,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  padding: 40px 30px;
+  padding: 30px;
   backface-visibility: hidden;
   box-sizing: border-box;
 }
@@ -55,12 +51,11 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
 }
 
 .text {
-  text-align: justify;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.32;
 }

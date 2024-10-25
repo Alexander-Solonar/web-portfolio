@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "icon": "icon-phone",
+    "label": "+38 068-944-18-77",
+    "href": "tel:+380689441877"
+  },
+  {
+    "id": 2,
+    "icon": "icon-email",
+    "label": "solo991@ukr.net",
+    "href": "mailto: solo991@ukr.net",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  },
+  {
+    "id": 3,
+    "icon": "icon-telegram",
+    "label": "alexander_solonar",
+    "href": "https://t.me/alexander_solonar",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  },
+  {
+    "id": 4,
+    "icon": "icon-linkedin",
+    "label": "Linkedin",
+    "href": "https://www.linkedin.com/in/alexandersolonar",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  },
+  {
+    "id": 5,
+    "icon": "icon-github",
+    "label": "GitHub",
+    "href": "https://github.com/Alexander-Solonar",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  }
+]

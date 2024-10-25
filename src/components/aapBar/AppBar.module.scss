@@ -1,18 +1,13 @@
 .app-bar {
-  position: relative;
+  position: absolute;
   z-index: 6;
   text-align: end;
+  width: 100%;
   color: var(--primary-white-color);
   fill: var(--primary-white-color);
-  border-bottom: 1px solid var(--primary-gray-color);
-  background-color: var(--primary-black-color);
-}
-
-.app-bar-light {
-  color: var(--primary-black-color);
-  fill: var(--primary-black-color);
-  border-bottom: 1px solid rgba(81, 81, 81, 0.2);
-  background-color: var(--primary-white-color);
+  border-bottom: 1px solid;
+  border-image-source: var(--gradient-border);
+  border-image-slice: 1;
 }
 
 .content {

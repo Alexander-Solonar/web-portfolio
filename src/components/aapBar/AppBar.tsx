@@ -1,16 +1,14 @@
 import { useContext, useEffect, useState } from 'react';
 import { Context } from '../../context/Context';
 import throttle from 'lodash.throttle';
-import clsx from 'clsx';
 import Logo from '../logo';
 import Navigation from '../navigation';
 import BurgerButton from '../burgerButton';
-import ThemeSwitchButton from '../themeSwitchButton';
 import LangSwitchButton from '../langSwitchButton';
 import scss from './AppBar.module.scss';
 
 const AppBar = () => {
-  const { theme, setIsOpenMenu } = useContext(Context);
+  const { setIsOpenMenu } = useContext(Context);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -27,19 +25,18 @@ const AppBar = () => {
   }, [setIsOpenMenu]);
 
   return (
-    <div className={clsx(scss['app-bar'], theme && scss['app-bar-light'])}>
+    <header className={scss['app-bar']}>
       <div className="container">
-        <div className={scss.content}>
+        <div className={scss['content']}>
           <Logo />
-          <div className={scss.box}>
-            {windowWidth > 830 && <Navigation classNameList={'list'} />}
-            {windowWidth < 831 && <BurgerButton />}
+          <div className={scss['box']}>
+            {windowWidth > 830 && <Navigation classNameList="desktop-nav" />}
             <LangSwitchButton />
-            <ThemeSwitchButton />
+            {windowWidth < 831 && <BurgerButton />}
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

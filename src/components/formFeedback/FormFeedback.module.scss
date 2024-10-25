@@ -16,22 +16,15 @@
   }
 }
 
-.label {
-  position: relative;
-  display: block;
-  margin-bottom: 25px;
-  font-weight: 500;
-  color: var(--third-white-color);
-}
-
-.input {
+.input,
+.textarea {
   position: relative;
   display: block;
   width: 100%;
   padding: 10px 12px;
 
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
   line-height: 1.32;
   outline: none;
   border: none;
@@ -40,8 +33,8 @@
   background-color: transparent;
 
   &::placeholder {
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 14px;
     line-height: 1.16;
     letter-spacing: 0.05em;
     color: var(--third-white-color);
@@ -49,29 +42,9 @@
 }
 
 .textarea {
-  display: block;
-  width: 100%;
   height: 120px;
   margin-bottom: 25px;
-  padding: 10px 12px;
   resize: none;
-
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.32;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid var(--primary-white-color);
-  color: var(--third-white-color);
-  background-color: transparent;
-
-  &::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.16;
-    letter-spacing: 0.05em;
-    color: var(--third-white-color);
-  }
 }
 
 .button {
@@ -79,7 +52,7 @@
   margin: 0 auto;
   padding: 14px 40px;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
   cursor: pointer;
@@ -97,12 +70,4 @@
   @media (max-width: 767px) {
     margin: 40px auto;
   }
-}
-
-.error {
-  position: absolute;
-  color: red;
-  bottom: -18px;
-  font-size: 14px;
-  font-weight: 400;
 }

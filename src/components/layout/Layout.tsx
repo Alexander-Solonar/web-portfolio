@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import AppBar from '../aapBar/AppBar';
 import Footer from '../footer/Footer';
-import MobileMenu from '../mobileMenu';
 import Loader from '../loader';
 import scss from './Layout.module.scss';
 
@@ -18,7 +17,6 @@ const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-      <MobileMenu />
     </div>
   );
 };

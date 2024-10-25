@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "icon": "icon-email",
+    "label": "solo991@ukr.net",
+    "href": "mailto: solo991@ukr.net",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  },
+  {
+    "id": 2,
+    "icon": "icon-telegram",
+    "label": "alexander_solonar",
+    "href": "https://t.me/alexander_solonar",
+    "target": "_blank",
+    "rel": "noopener noreferrer nofollow"
+  },
+  {
+    "id": 3,
+    "icon": "icon-phone",
+    "label": "+38 068-944-18-77",
+    "href": "tel:+380689441877"
+  }
+]
