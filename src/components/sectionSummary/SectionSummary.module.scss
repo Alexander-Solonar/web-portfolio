@@ -1,5 +1,6 @@
 .summary {
   flex: 1;
+  padding: 130px 0 50px 0;
   min-height: 100%;
   color: var(--primary-white-color);
   background-color: var(--secondary-black-color);
@@ -15,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  padding: 50px 0;
   background-image: url('../../assets/images/background.webp');
   background-repeat: no-repeat;
   background-position: center;

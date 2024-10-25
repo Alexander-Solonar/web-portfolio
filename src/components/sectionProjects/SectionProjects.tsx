@@ -1,15 +1,17 @@
-import { useContext } from 'react';
+import { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Context } from '../../context/Context';
-import clsx from 'clsx';
+import { Project } from '../../interfaces';
 import scss from './SectionProjects.module.scss';
 
-const SectionProjects = ({ data }) => {
-  const { theme } = useContext(Context);
+interface SectionProjectsProps {
+  data: Project[];
+}
+
+const SectionProjects: FC<SectionProjectsProps> = ({ data }) => {
   const location = useLocation();
 
   return (
-    <section className={clsx(scss.projects, theme && scss['projects-light'])}>
+    <section className={scss['projects']}>
       <div className="container">
         <ul className={scss.list}>
           {data.map(({ id, name, imgProject }) => (

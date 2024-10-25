@@ -1,14 +1,15 @@
-import { useContext, useRef } from 'react';
+import { FC, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { Context } from '../../context/Context';
-import clsx from 'clsx';
+import { Project } from '../../interfaces';
 import icons from '../../assets/icons/icons.svg';
 import scss from './SectionProject.module.scss';
 
-const SectionProject = ({ project }) => {
-  const { theme } = useContext(Context);
+interface SectionProjectProps {
+  project: Project;
+}
+
+const SectionProject: FC<SectionProjectProps> = ({ project }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const backLinkHref = useRef(location.state?.from ?? '/');
@@ -17,7 +18,7 @@ const SectionProject = ({ project }) => {
   const { image, name, text, githubLink, livePageLink, tag } = project;
 
   return (
-    <section className={clsx(scss.project, theme && scss['project-light'])}>
+    <section className={scss['project']}>
       <div className="container">
         <Link
           className={scss.backLink}
@@ -62,17 +63,6 @@ const SectionProject = ({ project }) => {
       </div>
     </section>
   );
-};
-
-SectionProject.propTypes = {
-  project: PropTypes.shape({
-    image: PropTypes.string,
-    name: PropTypes.string,
-    text: PropTypes.string,
-    githubLink: PropTypes.string,
-    livePageLink: PropTypes.string,
-    tag: PropTypes.string,
-  }).isRequired,
 };
 
 export default SectionProject;

@@ -1,14 +1,10 @@
 .project {
   flex: 1;
-  padding: 20px 0 30px;
+  padding: 100px 0 30px;
   color: var(--primary-white-color);
   background-color: var(--secondary-black-color);
 }
 
-.project-light {
-  color: var(--primary-black-color);
-  background-color: var(--secondary-white-color);
-}
 .backLink {
   display: inline-flex;
   justify-content: center;

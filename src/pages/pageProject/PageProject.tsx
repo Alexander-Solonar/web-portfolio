@@ -7,7 +7,7 @@ import { Project } from '../../interfaces';
 
 const initialProject: Project = {
   githubLink: '',
-  id: null,
+  id: '',
   image: '',
   imgProject: '',
   livePageLink: '',

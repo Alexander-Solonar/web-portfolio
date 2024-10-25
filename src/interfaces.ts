@@ -1,13 +1,11 @@
 export interface ContextProps {
-  theme: boolean;
-  setTheme: React.Dispatch<React.SetStateAction<boolean>>;
   isOpenMenu: boolean;
   setIsOpenMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface Project {
   githubLink: string;
-  id: null | number;
+  id: string;
   image: string;
   imgProject: string;
   livePageLink: string;

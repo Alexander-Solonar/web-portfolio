@@ -8,7 +8,7 @@ const animation = {
   hidden: {
     opacity: 0,
   },
-  visible: custom => ({
+  visible: (custom: number) => ({
     opacity: 1,
     transition: { delay: custom * 0.2 },
   }),
@@ -22,6 +22,8 @@ const SectionAboutMe = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const targetElement = textRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -31,13 +33,13 @@ const SectionAboutMe = () => {
       { threshold: 0.1 }
     );
 
-    if (textRef.current) {
-      observer.observe(textRef.current);
+    if (targetElement) {
+      observer.observe(targetElement);
     }
 
     return () => {
-      if (textRef.current) {
-        observer.unobserve(textRef.current);
+      if (targetElement) {
+        observer.unobserve(targetElement);
       }
     };
   }, []);
