@@ -21,7 +21,7 @@ const MyContacts = () => {
         ))}
       </ul>
       <h3 className={scss['sun-title']}>{t('contacts.sub')} :</h3>
-      <address className={scss.address}>
+      <address className={scss['address']}>
         <a
           className={scss.link}
           href="https://goo.gl/maps/qAHahXqh9R1bDvRt6"

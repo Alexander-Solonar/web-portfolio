@@ -9,13 +9,14 @@
 }
 
 .button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
   font-weight: 400;
   cursor: pointer;
   color: inherit;
   background-color: transparent;
   border: none;
+
   @media (max-width: 390px) {
     font-size: 14px;
   }
@@ -25,6 +26,7 @@
   content: '/';
   margin-left: 12px;
   color: var(--third-white-color);
+
   @media (max-width: 390px) {
     display: none;
   }

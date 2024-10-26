@@ -15,7 +15,7 @@ const Footer = () => {
           <ContactFooter />
           <div className={scss['block-copyright']}>
             <Logo />
-            <p className={scss['text']}> {t('location')}</p>
+            <p> {t('location')}</p>
             <p> &#169; 2023, Solonar Oleksandr</p>
           </div>
         </div>

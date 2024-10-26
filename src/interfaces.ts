@@ -27,3 +27,9 @@ export interface FormFeedbackValues {
   email: string;
   message: string;
 }
+
+export interface SpriteIconProps {
+  width: number;
+  height: number;
+  icon: string;
+}

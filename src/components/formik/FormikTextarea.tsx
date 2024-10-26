@@ -13,7 +13,7 @@ interface FormikTextareaProps {
 const FormikTextarea: FC<FormikTextareaProps> = props => {
   const { label, name, ...rest } = props;
   return (
-    <label className={scss.label} htmlFor={name}>
+    <label className={scss['label']} htmlFor={name}>
       {label}
       <Field id={name} as="textarea" name={name} {...rest} />
       <FormikError name={name} />

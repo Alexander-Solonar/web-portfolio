@@ -11,11 +11,10 @@ const MobileMenu = () => {
     if ((e.target as HTMLElement).nodeName === 'A') setIsOpenMenu(false);
   };
 
+  const getMobileMenuClass = clsx(scss['content'], isOpenMenu && scss['is-open']);
+
   return (
-    <div
-      className={clsx(scss['content'], isOpenMenu && scss['is-open'])}
-      onClick={handleClickCloseMenu}
-    >
+    <div className={getMobileMenuClass} onClick={handleClickCloseMenu}>
       <Navigation classNameList={'mobile-nav'} />
     </div>
   );

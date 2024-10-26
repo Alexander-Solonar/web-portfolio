@@ -5,9 +5,7 @@ import scss from './SectionAboutMe.module.scss';
 import { useEffect, useState, useRef } from 'react';
 
 const animation = {
-  hidden: {
-    opacity: 0,
-  },
+  hidden: { opacity: 0 },
   visible: (custom: number) => ({
     opacity: 1,
     transition: { delay: custom * 0.2 },
@@ -15,11 +13,11 @@ const animation = {
 };
 
 const SectionAboutMe = () => {
-  const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
   const [text, setText] = useState('');
+  const { t } = useTranslation();
   const fullText = t('aboutMe.text');
   const textRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const targetElement = textRef.current;
@@ -60,12 +58,12 @@ const SectionAboutMe = () => {
   }, [isVisible, fullText]);
 
   return (
-    <section className={scss.aboutMe}>
+    <section className={scss['aboutMe']}>
       <div className="container">
-        <div className={scss.content}>
+        <div className={scss['content']}>
           <div className={scss['box-desc']}>
-            <h2 className={scss.title}>{t('aboutMe.title')}</h2>
-            <p ref={textRef} className={scss.text}>
+            <h2 className={scss['title']}>{t('aboutMe.title')}</h2>
+            <p ref={textRef} className={scss['text']}>
               {text}
             </p>
           </div>

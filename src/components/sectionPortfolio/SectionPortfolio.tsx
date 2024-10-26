@@ -14,8 +14,8 @@ const SectionPortfolio: FC<SectionPortfolioProps> = ({ data }) => {
   return (
     <section className={scss['portfolio']}>
       <div className="container">
-        <div className={scss.content}>
-          <h2 className={scss.title}>{t('portfolio.title')}</h2>
+        <div className={scss['content']}>
+          <h2 className={scss['title']}>{t('portfolio.title')}</h2>
           <PortfolioSwiper projects={data} />
         </div>
       </div>

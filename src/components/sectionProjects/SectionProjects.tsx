@@ -13,18 +13,16 @@ const SectionProjects: FC<SectionProjectsProps> = ({ data }) => {
   return (
     <section className={scss['projects']}>
       <div className="container">
-        <ul className={scss.list}>
+        <ul className={scss['list']}>
           {data.map(({ id, name, imgProject }) => (
-            <li key={id} className={scss.item}>
-              <h3 className={scss.title}>{name}</h3>
-
+            <li key={id}>
+              <h3 className={scss['title']}>{name}</h3>
               <Link
                 to={`/projects/project/${id}`}
-                className={scss.link}
+                className={scss['link']}
                 state={{ from: location }}
               >
                 <img
-                  className={scss.image}
                   src={imgProject}
                   alt={`${name} site preview`}
                   width={550}

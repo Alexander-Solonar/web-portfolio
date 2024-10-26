@@ -3,7 +3,7 @@ import scss from './Loader.module.scss';
 
 const Loader = () => {
   return (
-    <div className={scss.loader}>
+    <div className={scss['loader']}>
       <Oval
         height={40}
         width={40}

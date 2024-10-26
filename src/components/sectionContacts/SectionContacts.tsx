@@ -6,7 +6,7 @@ const SectionContacts = () => {
   return (
     <section className={scss['contacts']}>
       <div className="container">
-        <div className={scss.content}>
+        <div className={scss['content']}>
           <MyContacts />
           <FormFeedback />
         </div>

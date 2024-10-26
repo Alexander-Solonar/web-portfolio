@@ -11,7 +11,7 @@
   --primary-yellow-color: #e2b000;
   --secondary-yellow-color: #e29300;
   --gradient-background: radial-gradient(circle, #03314d, #0a0a0a);
-  /* --gradient-background-secondary: radial-gradient(circle, #2d3a4b, #191919); */
+  --gradient-background-secondary: radial-gradient(circle, #2d3a4b, #191919);
 
   --gradient-border: linear-gradient(
     270deg,

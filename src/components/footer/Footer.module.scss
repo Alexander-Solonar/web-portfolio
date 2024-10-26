@@ -22,14 +22,9 @@
 .block-copyright {
   display: flex;
   flex-direction: column;
-
   row-gap: 16px;
 
   @media (max-width: 674px) {
     align-items: center;
   }
-}
-
-.text {
-  margin-top: auto;
 }

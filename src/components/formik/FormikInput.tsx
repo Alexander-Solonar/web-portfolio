@@ -11,7 +11,7 @@ interface FormikInputProps {
 
 const FormikInput: FC<FormikInputProps> = ({ label, name, ...rest }) => {
   return (
-    <label className={scss.label} htmlFor={name}>
+    <label className={scss['label']} htmlFor={name}>
       {label}
       <Field id={name} name={name} {...rest} />
       <FormikError name={name} />

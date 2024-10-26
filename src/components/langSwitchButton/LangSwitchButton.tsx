@@ -10,15 +10,15 @@ const LangSwitchButton = () => {
     i18n.changeLanguage(lng);
   };
 
+  const getLangSwitchBtnClass = (lang: string) =>
+    clsx(scss['button'], i18n.language === lang && scss['active']);
+
   return (
     <div className={scss['content']}>
       {languages.map(lang => (
         <button
           key={lang}
-          className={clsx(
-            scss['button'],
-            i18n.language === lang && scss['active']
-          )}
+          className={getLangSwitchBtnClass(lang)}
           onClick={() => changeLanguage(lang)}
         >
           {lang.toUpperCase()}

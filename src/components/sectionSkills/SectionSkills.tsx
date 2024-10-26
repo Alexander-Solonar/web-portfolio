@@ -14,11 +14,11 @@ const SectionSkills: FC<SectionSkillsProps> = ({ data }) => {
   return (
     <section className={scss['skills']}>
       <div className="container">
-        <div className={scss.content}>
-          <h2 className={scss.title}>{t('skills.title')}</h2>
-          <ul className={scss.list}>
+        <div className={scss['content']}>
+          <h2 className={scss['title']}>{t('skills.title')}</h2>
+          <ul className={scss['list']}>
             {data.map((element: Skill) => (
-              <li key={element.id} className={scss.item}>
+              <li key={element.id} className={scss['item']}>
                 <CardSkills skill={element} />
               </li>
             ))}

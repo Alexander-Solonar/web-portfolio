@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Context } from '../../context/Context';
 import clsx from 'clsx';
-import icons from '../../assets/icons/icons.svg';
+import SpriteIcon from '../spriteIcon';
 import scss from './BurgerButton.module.scss';
 
 const BurgerButton = () => {
@@ -11,13 +11,11 @@ const BurgerButton = () => {
     setIsOpenMenu(prevState => !prevState);
   };
 
+  const getBurgerBtnClass = clsx(scss['burger-btn'], isOpenMenu && scss['open-menu']);
+
   return (
-    <button
-      className={clsx(scss['burger-btn'], isOpenMenu && scss['open-menu'])}
-    >
-      <svg width="50" height="34" onClick={handleClick}>
-        <use href={`${icons}#icon-menu`} />
-      </svg>
+    <button className={getBurgerBtnClass} onClick={handleClick}>
+      <SpriteIcon width={50} height={34} icon={'icon-menu'} />
     </button>
   );
 };

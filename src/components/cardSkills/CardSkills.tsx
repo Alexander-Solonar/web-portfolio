@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Skill } from '../../interfaces';
 import icons from '../../assets/icons/icons.svg';
 import scss from './CardSkills.module.scss';
-import { Skill } from '../../interfaces';
 
 interface CardSkillsProps {
   skill: Skill;

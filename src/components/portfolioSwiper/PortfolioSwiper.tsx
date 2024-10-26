@@ -12,6 +12,19 @@ interface PortfolioSwiperProps {
   projects: Project[];
 }
 
+const SWIPER_SETTINGS = {
+  speed: 800,
+  loop: true,
+  navigation: true,
+  grabCursor: true,
+  modules: [Navigation, EffectCreative],
+  effect: 'creative',
+  creativeEffect: {
+    prev: { translate: [0, 0, -400] },
+    next: { translate: ['100%', 0, 0] },
+  },
+};
+
 const PortfolioSwiper: FC<PortfolioSwiperProps> = ({ projects }) => {
   const scrollPositionRef = useRef(0);
   const location = useLocation();
@@ -32,39 +45,16 @@ const PortfolioSwiper: FC<PortfolioSwiperProps> = ({ projects }) => {
   }, [saveScroll]);
 
   return (
-    <Swiper
-      speed={800}
-      loop={true}
-      navigation={true}
-      modules={[Navigation, EffectCreative]}
-      grabCursor={true}
-      effect={'creative'}
-      creativeEffect={{
-        prev: {
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }}
-      className={`${scss.mySwiper}`}
-    >
+    <Swiper {...SWIPER_SETTINGS} className={`${scss.mySwiper}`}>
       {projects.map(({ id, name, image, text }) => (
         <SwiperSlide key={id}>
-          <div className={scss.content}>
-            <img
-              className={scss.image}
-              src={image}
-              alt={`${name} site preview`}
-              width={500}
-              height={500}
-            />
-
-            <div className={scss.desc}>
-              <h3 className={scss.title}>{name}</h3>
-              <p className={scss.text}>{text.slice(0, 400) + '...'}</p>
+          <div className={scss['content']}>
+            <img src={image} alt={`${name} site preview`} width={500} height={500} />
+            <div className={scss['desc']}>
+              <h3 className={scss['title']}>{name}</h3>
+              <p className={scss['text']}>{text.slice(0, 400) + '...'}</p>
               <Link
-                className={scss.link}
+                className={scss['link']}
                 to={`/projects/project/${id}`}
                 state={{
                   from: location,

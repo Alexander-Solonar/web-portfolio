@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Formik, Form, FormikHelpers } from 'formik';
 import { useTranslation } from 'react-i18next';
-import { SendMessageTg } from '../../services/SendMessageTg';
+import { Formik, Form, FormikHelpers } from 'formik';
+import { schema } from '../formik/schemas';
 import { SendMessageEmail } from '../../services/SendMessageEmail';
+import { SendMessageTg } from '../../services/SendMessageTg';
 import { FormFeedbackValues } from '../../interfaces';
+import FormikControl from '../formik/FormikControl';
 import Notiflix from 'notiflix';
 import scss from './FormFeedback.module.scss';
-import FormikControl from '../formik/FormikControl';
-import { schema } from '../formik/schemas';
 
 const FormFeedback = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -73,11 +73,7 @@ const FormFeedback = () => {
           label={t('form.message')}
           placeholder={t('form.placeholderM')}
         />
-        <button
-          className={scss.button}
-          type="submit"
-          disabled={isButtonDisabled}
-        >
+        <button className={scss.button} type="submit" disabled={isButtonDisabled}>
           {t('form.button')}
         </button>
       </Form>

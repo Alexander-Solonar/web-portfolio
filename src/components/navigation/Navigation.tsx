@@ -17,7 +17,7 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ classNameList }) => {
   const { t } = useTranslation();
 
-  const linkClassName = ({ isActive }: { isActive: boolean }) =>
+  const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive ? scss['active'] : scss['link'];
 
   return (
@@ -25,7 +25,7 @@ const Navigation: FC<NavigationProps> = ({ classNameList }) => {
       <ul className={scss[`${classNameList}`]}>
         {nameLink.map(({ id, name, navigate }) => (
           <li key={id}>
-            <NavLink className={linkClassName} to={navigate}>
+            <NavLink className={linkClass} to={navigate}>
               {t(`${name}`)}
             </NavLink>
           </li>
