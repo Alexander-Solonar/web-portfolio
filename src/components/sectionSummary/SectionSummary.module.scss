@@ -1,9 +1,12 @@
 .summary {
   flex: 1;
-  padding: 130px 0 50px 0;
+  padding: 50px 0;
   min-height: 100%;
   color: var(--primary-white-color);
-  background-image: var(--gradient-background);
+  background-image: url('../../assets/images/bg-buildings.webp');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
 }
 
 .content {
@@ -11,10 +14,6 @@
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  background-image: url('../../assets/images/background.webp');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .content img {
@@ -24,16 +23,4 @@
 .linkList {
   display: flex;
   column-gap: 30px;
-}
-
-.link {
-  display: inline-block;
-  padding: 6px 15px;
-  font-weight: 400;
-  color: inherit;
-  background-color: var(--secondary-yellow-color);
-
-  &:hover {
-    background-color: var(--primary-yellow-color);
-  }
 }

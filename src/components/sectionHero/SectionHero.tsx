@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import PrimeryButton from '../primeryButton';
+import PrimeryButton from '../buttons/primeryButton';
 import image from '../../assets/images/hero-image.webp';
 import scss from './SectionHero.module.scss';
 
@@ -21,8 +21,8 @@ const SectionHero = () => {
             <img
               src={image}
               alt="blue technology elements icon"
-              width={900}
-              height={599}
+              width={603}
+              height={534}
             />
           </div>
         </div>

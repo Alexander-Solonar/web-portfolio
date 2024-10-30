@@ -1,7 +1,13 @@
 .wrapper {
+  position: relative;
+  overflow: hidden;
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background-image: var(--gradient-background);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .main {

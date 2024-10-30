@@ -5,7 +5,9 @@
   border-top: 2px solid transparent;
   border-image-source: var(--gradient-border);
   border-image-slice: 1;
-  background-image: var(--gradient-background);
+  background-image: url('../../assets/images/bg-section-skills.webp');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .content {

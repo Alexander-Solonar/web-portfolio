@@ -33,8 +33,8 @@ const PageHome = () => {
   return (
     <>
       <SectionHero />
-      <SectionSkills data={skillsCollection} />
       <SectionAboutMe />
+      <SectionSkills data={skillsCollection} />
       <SectionPortfolio data={projectsCollection} />
     </>
   );

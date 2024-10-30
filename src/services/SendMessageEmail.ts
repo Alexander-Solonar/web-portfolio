@@ -10,7 +10,6 @@ interface Values {
 }
 
 export const SendMessageEmail = async (values: Values) => {
-  console.log(values);
   try {
     await fetch(URL_API, {
       method: 'POST',

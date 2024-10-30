@@ -3,8 +3,8 @@ import { Context } from '../../context/Context';
 import throttle from 'lodash.throttle';
 import Logo from '../logo';
 import Navigation from '../navigation';
-import BurgerButton from '../burgerButton';
-import LangSwitchButton from '../langSwitchButton';
+import LangSwitchButton from '../buttons/langSwitchButton';
+import BurgerButton from '../buttons/burgerButton';
 import scss from './AppBar.module.scss';
 
 const AppBar = () => {

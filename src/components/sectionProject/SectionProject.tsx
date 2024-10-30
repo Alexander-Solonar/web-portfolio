@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Project } from '../../interfaces';
 import SpriteIcon from '../spriteIcon';
+import ExternalLinkButton from '../buttons/externalLinkButton';
 import scss from './SectionProject.module.scss';
 
 interface SectionProjectProps {
@@ -39,15 +40,7 @@ const SectionProject: FC<SectionProjectProps> = ({ project }) => {
             <p className={scss['text']}>{text}</p>
             <div className={scss['blockLinks']}>
               {links.map((link, index) => (
-                <a
-                  key={index}
-                  className={scss.link}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  {link.text}
-                </a>
+                <ExternalLinkButton key={index} data={link} />
               ))}
             </div>
           </div>

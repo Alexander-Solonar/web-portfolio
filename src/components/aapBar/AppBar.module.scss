@@ -1,8 +1,9 @@
 .app-bar {
-  position: absolute;
-  z-index: 6;
+  position: relative;
+  z-index: 1;
   text-align: end;
   width: 100%;
+  z-index: 2;
   color: var(--primary-white-color);
   fill: var(--primary-white-color);
   border-bottom: 1px solid;

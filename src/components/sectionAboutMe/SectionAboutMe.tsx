@@ -1,16 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import walk from '../../assets/images/walk.png';
-import scss from './SectionAboutMe.module.scss';
 import { useEffect, useState, useRef } from 'react';
-
-const animation = {
-  hidden: { opacity: 0 },
-  visible: (custom: number) => ({
-    opacity: 1,
-    transition: { delay: custom * 0.2 },
-  }),
-};
+import { useTranslation } from 'react-i18next';
+import walk from '../../assets/images/walk.webp';
+import scss from './SectionAboutMe.module.scss';
 
 const SectionAboutMe = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -52,7 +43,7 @@ const SectionAboutMe = () => {
       if (i > fullText.length) {
         clearInterval(intervalId);
       }
-    }, 10);
+    }, 8);
 
     return () => clearInterval(intervalId);
   }, [isVisible, fullText]);
@@ -67,17 +58,7 @@ const SectionAboutMe = () => {
               {text}
             </p>
           </div>
-          <div>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0.2, once: true }}
-              custom={1}
-              variants={animation}
-            >
-              <img src={walk} alt="man" width={320} />
-            </motion.div>
-          </div>
+          <img src={walk} alt="man" width={320} />
         </div>
       </div>
     </section>

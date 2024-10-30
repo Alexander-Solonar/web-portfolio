@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import ExternalLinkButton from '../buttons/externalLinkButton';
 import cv from '../../assets/images/cv-image.webp';
 import scss from './SectionSummary.module.scss';
 
@@ -23,15 +24,7 @@ const SectionSummary = () => {
           <img src={cv} alt="summary" width={300} height={425} />
           <div className={scss['linkList']}>
             {links.map((link, index) => (
-              <a
-                key={index}
-                className={scss['link']}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                {link.text}
-              </a>
+              <ExternalLinkButton key={index} data={link} />
             ))}
           </div>
         </div>

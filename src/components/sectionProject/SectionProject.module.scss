@@ -1,8 +1,7 @@
 .project {
   flex: 1;
-  padding: 100px 0 30px;
+  padding: 50px 0;
   color: var(--primary-white-color);
-  background-color: var(--secondary-black-color);
 }
 
 .backLink {
@@ -10,10 +9,10 @@
   justify-content: center;
   fill: var(--secondary-yellow-color);
   color: inherit;
-}
 
-.backLink:hover {
-  fill: var(--primary-yellow-color);
+  &:hover {
+    fill: var(--primary-yellow-color);
+  }
 }
 
 .content {
@@ -55,17 +54,5 @@
 
   @media (max-width: 1023px) {
     justify-content: center;
-  }
-}
-
-.link {
-  display: inline-block;
-  padding: 8px 20px;
-  font-weight: 400;
-  color: inherit;
-  background-color: var(--secondary-yellow-color);
-
-  &:hover {
-    background-color: var(--primary-yellow-color);
   }
 }
