@@ -4,7 +4,6 @@ import AppBar from '../aapBar/AppBar';
 import Footer from '../footer/Footer';
 import Loader from '../loader';
 import scss from './Layout.module.scss';
-import MobileMenu from '../mobileMenu';
 
 const Layout = () => {
   return (
@@ -18,7 +17,6 @@ const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-      <MobileMenu />
     </div>
   );
 };

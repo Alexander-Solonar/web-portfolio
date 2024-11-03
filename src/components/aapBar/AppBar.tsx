@@ -5,10 +5,12 @@ import Logo from '../logo';
 import Navigation from '../navigation';
 import LangSwitchButton from '../buttons/langSwitchButton';
 import BurgerButton from '../buttons/burgerButton';
+import MobileMenu from '../mobileMenu';
 import scss from './AppBar.module.scss';
 
 const AppBar = () => {
   const { setIsOpenMenu } = useContext(Context);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -25,18 +27,21 @@ const AppBar = () => {
   }, [setIsOpenMenu]);
 
   return (
-    <header className={scss['app-bar']}>
-      <div className="container">
-        <div className={scss['content']}>
-          <Logo />
-          <div className={scss['box']}>
-            {windowWidth > 830 && <Navigation classNameList="desktop-nav" />}
-            <LangSwitchButton />
-            {windowWidth < 831 && <BurgerButton />}
+    <>
+      <header className={scss['app-bar']}>
+        <div className="container">
+          <div className={scss['content']}>
+            <Logo />
+            <div className={scss['box']}>
+              {windowWidth > 830 && <Navigation classNameList="desktop-nav" />}
+              <LangSwitchButton />
+              {windowWidth < 831 && <BurgerButton />}
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <MobileMenu />
+    </>
   );
 };
 
