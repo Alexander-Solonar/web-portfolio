@@ -19,9 +19,7 @@ export const getProjectsCollection = async (lng: string) => {
 };
 
 export const getProject = async (lng: string, projectId: string) => {
-  const response = await axios.get(
-    `${databaseURL}/portfolio-${lng}/${projectId}.json`
-  );
+  const response = await axios.get(`${databaseURL}/portfolio-${lng}/${projectId}.json`);
   return response.data;
 };
 

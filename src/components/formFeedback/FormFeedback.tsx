@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Formik, Form, FormikHelpers } from 'formik';
 import { schema } from '../formik/schemas';
-import { SendMessageEmail } from '../../services/SendMessageEmail';
 import { SendMessageTg } from '../../services/SendMessageTg';
 import { FormFeedbackValues } from '../../interfaces';
 import FormikControl from '../formik/FormikControl';
@@ -28,7 +27,6 @@ const FormFeedback = () => {
     setButtonDisabled(true);
     actions.resetForm();
     Notiflix.Notify.success(notifySuccess);
-    SendMessageEmail(values);
     SendMessageTg(values);
     setButtonDisabled(false);
   };

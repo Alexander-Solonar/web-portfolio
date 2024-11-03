@@ -6,8 +6,8 @@ const PageSummary = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = t('title.summary');
     window.scrollTo(0, 0);
+    document.title = t('title.summary');
   }, [t]);
 
   return <SectionSummary />;

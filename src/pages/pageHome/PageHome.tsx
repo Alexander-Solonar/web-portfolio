@@ -1,34 +1,34 @@
-import { useEffect, useState } from 'react';
-import * as APIFirebase from '../../services/APIFirebase';
+import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Project, Skill } from '../../interfaces';
+import * as APIFirebase from '../../services/APIFirebase';
 import SectionAboutMe from '../../components/sectionAboutMe/SectionAboutMe';
 import SectionHero from '../../components/sectionHero';
 import SectionPortfolio from '../../components/sectionPortfolio';
 import SectionSkills from '../../components/sectionSkills';
-import { Project, Skill } from '../../interfaces';
+import Notiflix from 'notiflix';
 
 const PageHome = () => {
   const [skillsCollection, setSkillsCollection] = useState<Skill[]>([]);
   const [projectsCollection, setProjectsCollection] = useState<Project[]>([]);
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const lng = i18n.resolvedLanguage as string;
 
-  useEffect(() => {
-    document.title = t('title.main');
-  }, [t]);
+  const fetchData = useCallback(async () => {
+    try {
+      const skills = await APIFirebase.getSkillsCollection(lng);
+      setSkillsCollection(skills);
+      const projects = await APIFirebase.getProjectsCollection(lng);
+      setProjectsCollection(projects);
+    } catch (error: any) {
+      Notiflix.Notify.failure(error.message);
+    }
+  }, [lng]);
 
   useEffect(() => {
-    (async () => {
-      try {
-        const skills = await APIFirebase.getSkillsCollection(lng);
-        setSkillsCollection(skills);
-        const projects = await APIFirebase.getProjectsCollection(lng);
-        setProjectsCollection(projects);
-      } catch (error: any) {
-        alert(error.message);
-      }
-    })();
-  }, [lng]);
+    document.title = i18n.t('title.main');
+    fetchData();
+  }, [i18n, fetchData]);
 
   return (
     <>

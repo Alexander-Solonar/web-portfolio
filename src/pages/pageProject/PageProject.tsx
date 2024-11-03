@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import * as APIFirebase from '../../services/APIFirebase';
 import { useTranslation } from 'react-i18next';
 import SectionProject from '../../components/sectionProject/SectionProject';
 import { useParams } from 'react-router-dom';
 import { Project } from '../../interfaces';
+import Error from '../../components/error';
 
 const initialProject: Project = {
   githubLink: '',
@@ -19,29 +20,39 @@ const initialProject: Project = {
 const PageProject = () => {
   const { projectId } = useParams<{ projectId?: string }>();
   const [project, setProject] = useState<Project>(initialProject);
-  const { i18n, t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { i18n } = useTranslation();
   const lng = i18n.resolvedLanguage as string;
 
-  useEffect(() => {
-    document.title = `${t('title.project')} - ${project.name} | ${t(
-      'title.main'
-    )}`;
-  }, [project.name, t]);
+  const fetchProject = useCallback(async () => {
+    try {
+      const project = await APIFirebase.getProject(lng, projectId!);
+      setProject(project);
+    } catch (error: any) {
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [lng, projectId]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = `${project.name} | ${i18n.t('title.main')}`;
 
-    (async () => {
-      try {
-        const project = await APIFirebase.getProject(lng, projectId!);
-        setProject(project);
-      } catch (error: any) {
-        alert(error.message);
-      }
-    })();
-  }, [lng, projectId]);
+    fetchProject();
+  }, [project.name, i18n, fetchProject]);
 
-  return <SectionProject project={project} />;
+  return (
+    <>
+      {!isLoading && (
+        <>
+          {error && <Error text={error} />}
+          {!error && <SectionProject project={project} />}
+        </>
+      )}
+    </>
+  );
 };
 
 export default PageProject;

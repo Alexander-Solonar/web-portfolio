@@ -1,34 +1,43 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Project } from '../../interfaces';
 import * as APIFirebase from '../../services/APIFirebase';
 import SectionProjects from '../../components/sectionProjects';
-import { Project } from '../../interfaces';
+import Error from '../../components/error';
 
 const PageProjects = () => {
   const [projectsCollection, setProjectsCollection] = useState<Project[]>([]);
-  const { i18n, t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { i18n } = useTranslation();
   const lng = i18n.resolvedLanguage as string;
 
-  useEffect(() => {
-    document.title = t('title.gallery');
-  }, [t]);
+  const fetchProjects = useCallback(async () => {
+    try {
+      const projects = await APIFirebase.getProjectsCollection(lng);
+      setProjectsCollection(projects);
+    } catch (error: any) {
+      setError(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [lng]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = i18n.t('title.gallery');
 
-    (async () => {
-      try {
-        const projects = await APIFirebase.getProjectsCollection(lng);
-        setProjectsCollection(projects);
-      } catch (error: any) {
-        alert(error.message);
-      }
-    })();
-  }, [lng]);
+    fetchProjects();
+  }, [i18n, fetchProjects]);
 
   return (
     <>
-      <SectionProjects data={projectsCollection} />
+      {!isLoading && (
+        <>
+          {error && <Error text={error} />}
+          {!error && <SectionProjects data={projectsCollection} />}
+        </>
+      )}
     </>
   );
 };
