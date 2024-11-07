@@ -21,8 +21,8 @@ const SectionHero = () => {
             <img
               src={image}
               alt="blue technology elements icon"
-              width={603}
-              height={534}
+              width={600}
+              height={605}
             />
           </div>
         </div>

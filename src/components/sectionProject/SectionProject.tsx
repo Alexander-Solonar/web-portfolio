@@ -17,11 +17,11 @@ const SectionProject: FC<SectionProjectProps> = ({ project }) => {
   const backLinkHref = useRef(location.state?.from ?? '/');
   const scrollPosition = useRef(location.state?.scrollPosition?.current || 0);
 
-  const { image, name, text, githubLink, livePageLink, tag } = project;
+  const { image, name, text, githubLink, livePageLink } = project;
 
   const links = [
     { href: githubLink, text: 'gitHub' },
-    { href: livePageLink, text: `${t('site')} ${tag}` },
+    { href: livePageLink, text: `${t('site')}` },
   ];
 
   return (

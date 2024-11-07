@@ -7,6 +7,7 @@ import { FormFeedbackValues } from '../../interfaces';
 import FormikControl from '../formik/FormikControl';
 import Notiflix from 'notiflix';
 import scss from './FormFeedback.module.scss';
+import SpriteIcon from '../spriteIcon';
 
 const FormFeedback = () => {
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -73,6 +74,7 @@ const FormFeedback = () => {
         />
         <button className={scss.button} type="submit" disabled={isButtonDisabled}>
           {t('form.button')}
+          <SpriteIcon width={24} height={24} icon="icon-send" />
         </button>
       </Form>
     </Formik>

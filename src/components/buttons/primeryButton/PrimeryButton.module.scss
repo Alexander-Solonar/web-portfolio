@@ -1,33 +1,36 @@
 .button {
-  padding: 14px 80px;
+  padding: 14px 60px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
   border: 2px solid var(--secondary-yellow-color);
   cursor: pointer;
-  color: inherit;
+  color: var(--third-white-color);
   overflow: hidden;
   animation: showBnt 1s forwards;
   transition: color 250ms ease-in-out;
 
-  &:hover {
-    color: var(--primary-black-color);
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
   }
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--secondary-yellow-color);
-    transition: transform 250ms ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 250ms linear;
     z-index: -1;
   }
 
   &:hover::before {
-    transform: translateX(100%);
+    transform-origin: left;
+    transform: scaleX(1);
   }
 
   @media (max-width: 767px) {

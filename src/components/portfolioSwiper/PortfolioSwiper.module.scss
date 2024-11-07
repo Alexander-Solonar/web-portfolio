@@ -28,6 +28,7 @@
 .desc {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 25px;
   padding: 25px 40px;
   max-width: 500px;
@@ -56,6 +57,10 @@
 .link {
   font-size: 18px;
   color: var(--secondary-yellow-color);
+
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
+  }
 
   &:hover {
     color: var(--primary-yellow-color);

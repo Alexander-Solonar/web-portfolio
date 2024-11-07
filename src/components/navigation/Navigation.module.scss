@@ -18,21 +18,32 @@
   flex-direction: column;
   row-gap: 18px;
 
-  @media (max-width: 395px) {
+  @media (max-width: 787px) {
     align-items: center;
   }
 }
 
-.link,
-.active {
+.link {
   position: relative;
   white-space: nowrap;
   font-size: 14px;
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    color: var(--primary-blue-color);
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-blue-color);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: var(--primary-blue-color);
+    }
   }
 }
 

@@ -52,13 +52,13 @@ const SectionAboutMe = () => {
     <section className={scss['aboutMe']}>
       <div className="container">
         <div className={scss['content']}>
+          <img src={walk} alt="man" width={320} />
           <div className={scss['box-desc']}>
             <h2 className={scss['title']}>{t('aboutMe.title')}</h2>
             <p ref={textRef} className={scss['text']}>
               {text}
             </p>
           </div>
-          <img src={walk} alt="man" width={320} />
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@
   justify-content: flex-end;
   row-gap: 18px;
 
-  @media (max-width: 674px) {
+  @media (max-width: 787px) {
     justify-content: center;
   }
 }
@@ -14,7 +14,7 @@
   flex-direction: column;
   row-gap: 12px;
 
-  @media (max-width: 395px) {
+  @media (max-width: 787px) {
     align-items: center;
   }
 }
@@ -32,6 +32,10 @@
   fill: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
+  }
 
   &:hover {
     color: var(--primary-blue-color);

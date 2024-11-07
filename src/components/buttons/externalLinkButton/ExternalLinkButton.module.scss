@@ -1,9 +1,15 @@
 .link {
-  display: inline-block;
-  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 8px 15px;
   font-weight: 400;
   color: inherit;
   background-color: var(--secondary-yellow-color);
+
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
+  }
 
   &:hover {
     background-color: var(--primary-yellow-color);

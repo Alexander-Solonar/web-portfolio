@@ -15,14 +15,16 @@ const LangSwitchButton = () => {
 
   return (
     <div className={scss['content']}>
-      {languages.map(lang => (
-        <button
-          key={lang}
-          className={getLangSwitchBtnClass(lang)}
-          onClick={() => changeLanguage(lang)}
-        >
-          {lang.toUpperCase()}
-        </button>
+      {languages.map((lang, index) => (
+        <div className={scss['block-buttons']} key={lang}>
+          <button
+            className={getLangSwitchBtnClass(lang)}
+            onClick={() => changeLanguage(lang)}
+          >
+            {lang.toUpperCase()}
+          </button>
+          {index % 2 === 0 && <span className={scss['slash']}>/</span>}
+        </div>
       ))}
     </div>
   );

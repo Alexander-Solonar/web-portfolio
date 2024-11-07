@@ -31,7 +31,7 @@
     "telegram": "Telegram",
     "email": "Email",
     "message": "Message",
-    "button": "Send the message",
+    "button": "Submit",
     "notify": "Thanks! Your message has been sent!",
     "placeholderN": "Enter your name",
     "placeholderT": "Enter your telegram",
@@ -41,7 +41,7 @@
 
   "location": "Odesa, Ukraine",
   "summary": "Open",
-  "site": "site",
+  "site": "Project Demo",
 
   "title": {
     "main": "Solonar Oleksandr Portfolio",

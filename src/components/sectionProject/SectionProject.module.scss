@@ -10,6 +10,10 @@
   fill: var(--secondary-yellow-color);
   color: inherit;
 
+  &:focus-visible {
+    outline: 1px solid var(--primary-blue-color);
+  }
+
   &:hover {
     fill: var(--primary-yellow-color);
   }

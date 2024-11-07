@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
 import scss from './Navigation.module.scss';
 
 const nameLink = [
@@ -18,7 +19,7 @@ const Navigation: FC<NavigationProps> = ({ classNameList }) => {
   const { t } = useTranslation();
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? scss['active'] : scss['link'];
+    clsx(scss['link'], isActive && scss['active']);
 
   return (
     <nav className={scss['nav']}>
