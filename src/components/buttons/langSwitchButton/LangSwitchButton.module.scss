@@ -23,6 +23,19 @@
   color: inherit;
   background-color: transparent;
   border: none;
+  transition: color 250ms linear, scale 250ms linear;
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--primary-blue-color);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: var(--primary-blue-color);
+    }
+  }
 
   &:focus-visible {
     outline: 1px solid var(--primary-blue-color);
@@ -34,6 +47,7 @@
 }
 
 .active {
+  scale: 1.2;
   color: var(--primary-blue-color);
 }
 

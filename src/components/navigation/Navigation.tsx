@@ -32,6 +32,7 @@ const Navigation: FC<NavigationProps> = ({ classNameList }) => {
           </li>
         ))}
       </ul>
+      <span></span>
     </nav>
   );
 };

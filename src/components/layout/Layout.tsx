@@ -8,9 +8,8 @@ import scss from './Layout.module.scss';
 const Layout = () => {
   return (
     <div className={scss['wrapper']}>
-      <header>
-        <AppBar />
-      </header>
+      <AppBar />
+
       <main className={scss['main']}>
         <Suspense fallback={<Loader />}>
           <Outlet />

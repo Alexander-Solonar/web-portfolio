@@ -29,6 +29,7 @@
   min-height: 782px;
   padding-top: 30px;
   border-radius: 5px;
+  overflow: hidden;
   color: var(--primary-white-color);
 }
 
@@ -41,13 +42,10 @@
 }
 
 .text {
+  position: relative;
   white-space: pre-line;
   text-align: center;
   font-size: 18px;
   line-height: 1.7;
   letter-spacing: 1.5px;
-
-  @media (max-width: 1023px) {
-    text-align: justify;
-  }
 }

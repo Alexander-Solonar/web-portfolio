@@ -26,12 +26,14 @@ body {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
+#root {
+  overflow-y: scroll;
+  height: 100%;
+  background-image: var(--gradient-background);
 }
 
-#root {
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
 
 a {
