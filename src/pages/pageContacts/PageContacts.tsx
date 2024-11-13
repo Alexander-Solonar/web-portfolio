@@ -6,8 +6,8 @@ const PageContacts = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    document.title = t('title.contacts');
     window.scrollTo(0, 0);
+    document.title = t('title.contacts');
   }, [t]);
 
   return <SectionContacts />;

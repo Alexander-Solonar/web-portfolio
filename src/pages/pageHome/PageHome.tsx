@@ -26,6 +26,7 @@ const PageHome = () => {
   }, [lng]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = i18n.t('title.main');
     fetchData();
   }, [i18n, fetchData]);

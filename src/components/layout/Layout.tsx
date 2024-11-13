@@ -9,7 +9,6 @@ const Layout = () => {
   return (
     <div className={scss['wrapper']}>
       <AppBar />
-
       <main className={scss['main']}>
         <Suspense fallback={<Loader />}>
           <Outlet />
