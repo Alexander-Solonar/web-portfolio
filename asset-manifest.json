@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.5b948461.css",
+    "main.css": "/web-portfolio/static/css/main.294a247a.css",
     "main.js": "/web-portfolio/static/js/main.e0e650d1.js",
     "static/css/273.1610f986.chunk.css": "/web-portfolio/static/css/273.1610f986.chunk.css",
     "static/js/273.864c9a87.chunk.js": "/web-portfolio/static/js/273.864c9a87.chunk.js",
@@ -25,7 +25,7 @@
     "static/media/error.webp": "/web-portfolio/static/media/error.6425c2b0decacb123db9.webp",
     "index.html": "/web-portfolio/index.html",
     "static/media/getFetch.cjs": "/web-portfolio/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.5b948461.css.map": "/web-portfolio/static/css/main.5b948461.css.map",
+    "main.294a247a.css.map": "/web-portfolio/static/css/main.294a247a.css.map",
     "main.e0e650d1.js.map": "/web-portfolio/static/js/main.e0e650d1.js.map",
     "273.1610f986.chunk.css.map": "/web-portfolio/static/css/273.1610f986.chunk.css.map",
     "273.864c9a87.chunk.js.map": "/web-portfolio/static/js/273.864c9a87.chunk.js.map",
@@ -38,7 +38,7 @@
     "422.61985996.chunk.js.map": "/web-portfolio/static/js/422.61985996.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b948461.css",
+    "static/css/main.294a247a.css",
     "static/js/main.e0e650d1.js"
   ]
 }
