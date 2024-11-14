@@ -1,23 +1,21 @@
 .hero {
-  min-height: 655px;
-  padding: 40px 0;
+  display: flex;
+  height: 650px;
   color: var(--primary-white-color);
   overflow: hidden;
+
+  @media (max-width: 424px) {
+    height: 550px;
+  }
 }
 
 .content {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   column-gap: 20px;
-  height: 575px;
+  height: 100%;
   row-gap: 50px;
-  padding: 75px 0;
-
-  @media (max-width: 767px) {
-    padding: 45px 0;
-  }
 
   @media (max-width: 767px) {
     flex-wrap: wrap;
@@ -26,7 +24,6 @@
 }
 
 .box-desc {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -87,5 +84,13 @@
 .image {
   position: absolute;
   right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   filter: brightness(0.6);
+
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
