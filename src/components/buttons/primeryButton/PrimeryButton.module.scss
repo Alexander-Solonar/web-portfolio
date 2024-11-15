@@ -1,12 +1,13 @@
 .button {
-  padding: 14px 60px;
+  padding: 16px 60px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
-  border: 2px solid var(--secondary-yellow-color);
+  background-color: var(--secondary-blue-color);
   cursor: pointer;
   color: var(--third-white-color);
   overflow: hidden;
+  border-radius: 4px;
   animation: showBnt 1s forwards;
   transition: color 250ms ease-in-out;
 

@@ -4,14 +4,16 @@
   text-align: center;
   padding: 8px 15px;
   font-weight: 400;
+  border-radius: 4px;
   color: inherit;
-  background-color: var(--secondary-yellow-color);
+  background-color: var(--primary-blue-color);
+  transition: background-color 250ms linear;
 
   &:focus-visible {
     outline: 1px solid var(--primary-blue-color);
   }
 
   &:hover {
-    background-color: var(--primary-yellow-color);
+    background-color: var(--secondary-yellow-color);
   }
 }
