@@ -1,19 +1,19 @@
 .contacts {
-  flex: 1;
   display: flex;
-  padding: 50px 0;
+  flex: 1;
   min-height: 100%;
+  padding: 50px 0;
   color: var(--primary-white-color);
   background-image: url('../../assets/images/bg-buildings.webp');
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: top;
+  background-size: contain;
 }
 
 .content {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap-reverse;
-  column-gap: 120px;
+  justify-content: center;
   row-gap: 90px;
+  column-gap: 120px;
 }

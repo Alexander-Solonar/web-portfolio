@@ -15,22 +15,23 @@
 }
 
 .title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.32;
+  text-transform: uppercase;
+
   position: relative;
   display: inline-block;
   margin-bottom: 63px;
 
-  text-transform: uppercase;
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 1.32;
-
   &::after {
     content: '';
+
     position: absolute;
     bottom: -10px;
     left: 50%;
-    height: 3px;
     width: 60%;
+    height: 3px;
     transform: translateX(-50%);
     background-color: var(--primary-white-color);
   }
@@ -40,8 +41,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 40px;
   row-gap: 30px;
+  column-gap: 40px;
   min-height: 570px;
 }
 

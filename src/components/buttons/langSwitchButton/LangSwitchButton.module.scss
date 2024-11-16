@@ -5,7 +5,7 @@
 
   @media (max-width: 390px) {
     flex-direction: column;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -19,11 +19,12 @@
   font-family: 'Unbounded', sans-serif;
   font-size: 14px;
   font-weight: 400;
+
   cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-  border: none;
   transition: color 250ms linear, scale 250ms linear;
+  color: inherit;
+  border: none;
+  background-color: transparent;
 
   @media (hover: hover) {
     &:hover {
@@ -53,6 +54,7 @@
 
 .slash {
   font-weight: 400;
+
   color: var(--third-white-color);
 
   @media (max-width: 390px) {

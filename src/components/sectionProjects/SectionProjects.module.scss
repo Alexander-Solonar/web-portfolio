@@ -6,8 +6,8 @@
 
 .list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 70px;
   padding: 30px 0;
 }
@@ -18,29 +18,31 @@
 
   &::after {
     content: '';
+
     position: absolute;
-    box-sizing: border-box;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    box-sizing: border-box;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 3px solid transparent;
     border-radius: 5px;
     background-color: rgba(44, 44, 44, 0.2);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover::after,
   &:focus::after {
-    border: 3px solid var(--primary-yellow-color);
+    border: 3px solid var(--secondary-blue-color);
     background-color: rgba(44, 44, 44, 0.6);
   }
 }
 
 .title {
-  text-align: center;
   font-size: 20px;
+  text-align: center;
+
   margin-bottom: 25px;
 }
 

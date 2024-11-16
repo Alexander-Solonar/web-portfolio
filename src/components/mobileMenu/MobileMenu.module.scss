@@ -1,18 +1,16 @@
 .content {
   position: absolute;
+  z-index: 2;
   top: 0;
   right: 0;
   width: 100%;
   padding-top: 72px;
-  z-index: 2;
+  transition: transform 350ms linear;
   transform: translateY(-100%);
   color: var(--primary-white-color);
   fill: var(--primary-white-color);
-
-  transition: transform 350ms linear;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(50px);
-  // background-image: var(--gradient-background);
 
   @media screen and (min-width: 831px) {
     display: none;

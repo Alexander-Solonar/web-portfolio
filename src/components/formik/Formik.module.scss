@@ -1,16 +1,18 @@
 .label {
+  font-size: 14px;
+  font-weight: 400;
+
   position: relative;
   display: block;
   margin-bottom: 25px;
-  font-size: 14px;
-  font-weight: 400;
   color: var(--third-white-color);
 }
 
 .error {
-  position: absolute;
-  color: red;
-  bottom: -18px;
   font-size: 12px;
   font-weight: 300;
+
+  position: absolute;
+  bottom: -18px;
+  color: red;
 }

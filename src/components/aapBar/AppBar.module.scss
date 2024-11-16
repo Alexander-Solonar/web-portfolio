@@ -1,8 +1,9 @@
 .app-bar {
-  position: relative;
   text-align: end;
-  width: 100%;
+
+  position: relative;
   z-index: 3;
+  width: 100%;
   color: var(--primary-white-color);
   fill: var(--primary-white-color);
   border-bottom: 1px solid;
@@ -11,8 +12,8 @@
 }
 
 .content {
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -23,7 +24,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   flex: 1;
+  justify-content: flex-end;
   max-width: 596px;
 }

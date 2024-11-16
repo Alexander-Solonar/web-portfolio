@@ -8,14 +8,14 @@
 }
 
 .content {
-  max-width: 810px;
   display: flex;
-  justify-content: space-around;
   flex: 1;
   flex-wrap: wrap;
-  margin: 0 auto;
-  column-gap: 92px;
+  justify-content: space-around;
   row-gap: 50px;
+  column-gap: 92px;
+  max-width: 810px;
+  margin: 0 auto;
 }
 
 .block-copyright {
