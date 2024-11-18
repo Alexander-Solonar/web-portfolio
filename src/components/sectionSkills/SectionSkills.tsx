@@ -1,14 +1,12 @@
-import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { skillsCollection } from '../../data/cardsSkill';
 import { Skill } from '../../interfaces';
-import CardSkills from '../cardSkills';
+import { motion } from 'framer-motion';
+import { cardAnimation } from '../../animation/animation';
+import MCardSkills from '../cardSkills';
 import scss from './SectionSkills.module.scss';
 
-interface SectionSkillsProps {
-  data: Skill[];
-}
-
-const SectionSkills: FC<SectionSkillsProps> = ({ data }) => {
+const SectionSkills = () => {
   const { t } = useTranslation();
 
   return (
@@ -16,13 +14,22 @@ const SectionSkills: FC<SectionSkillsProps> = ({ data }) => {
       <div className="container">
         <div className={scss['content']}>
           <h2 className={scss['title']}>{t('skills.title')}</h2>
-          <ul className={scss['list']}>
-            {data.map((element: Skill) => (
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            className={scss['list']}
+          >
+            {skillsCollection.map((element: Skill) => (
               <li key={element.id} className={scss['item']}>
-                <CardSkills skill={element} />
+                <MCardSkills
+                  custom={element.id}
+                  variants={cardAnimation}
+                  skill={element}
+                />
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </section>

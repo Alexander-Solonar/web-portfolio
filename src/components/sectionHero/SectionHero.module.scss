@@ -12,7 +12,7 @@
 .content {
   position: relative;
   display: flex;
-  overflow: hidden;
+  // overflow: hidden;
   align-items: center;
   row-gap: 50px;
   column-gap: 20px;
@@ -48,21 +48,9 @@
   flex-direction: column;
   flex-shrink: 0;
   justify-content: center;
-  animation: showBnt 1s forwards;
 
   @media (max-width: 767px) {
     font-size: 42px;
-  }
-}
-
-@keyframes showBnt {
-  0% {
-    transform: translateY(-600px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 

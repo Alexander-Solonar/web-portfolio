@@ -22,8 +22,3 @@ export const getProject = async (lng: string, projectId: string) => {
   const response = await axios.get(`${databaseURL}/portfolio-${lng}/${projectId}.json`);
   return response.data;
 };
-
-export const getSkillsCollection = async (lng: string) => {
-  const response = await axios.get(`${databaseURL}/skills-${lng}.json`);
-  return response.data;
-};

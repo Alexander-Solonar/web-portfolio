@@ -20,6 +20,20 @@
   src: url('./assets/fonts/unbounded-v8-cyrillic_latin-700.woff2') format('woff2');
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--secondary-gray-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--primary-blue-color);
+
+  &:hover {
+    background-color: var(--secondary-blue-color);
+  }
+}
+
 html,
 body {
   font-family: 'Unbounded', sans-serif;

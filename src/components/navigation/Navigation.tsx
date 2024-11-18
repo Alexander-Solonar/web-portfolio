@@ -1,15 +1,9 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { nameLink } from '../../data/navLink';
 import clsx from 'clsx';
 import scss from './Navigation.module.scss';
-
-const nameLink = [
-  { id: 1, name: 'nav.home', navigate: '/' },
-  { id: 2, name: 'nav.projects', navigate: '/projects' },
-  { id: 3, name: 'nav.contacts', navigate: '/contacts' },
-  { id: 4, name: 'nav.summary', navigate: '/summary' },
-];
 
 interface NavigationProps {
   classNameList: string;

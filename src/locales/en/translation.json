@@ -48,5 +48,36 @@
     "gallery": "Gallery | Solonar Oleksandr  Portfolio",
     "contacts": "Contacts | Solonar Oleksandr  Portfolio",
     "summary": "Summary | Solonar Oleksandr  Portfolio"
+  },
+
+  "cards": {
+    "html": {
+      "title": "HTML",
+      "text": "HTML (HyperText Markup Language) is a standard markup language used to create web pages and structure their content. HTML allows you to define elements and their relationships on a web page."
+    },
+    "css": {
+      "title": "CSS",
+      "text": "CSS (Cascading Style Sheets) is a style language for web pages that defines the visual appearance and formatting of HTML elements, including colors, fonts, sizes, and layouts, to create stylish and consistent websites."
+    },
+    "sass": {
+      "title": "SASS",
+      "text": "SCSS is a CSS preprocessor that extends standard CSS with advanced features, streamlining style management for web applications by introducing variables, nested rules, mixins and more."
+    },
+    "js": {
+      "title": "JavaScript",
+      "text": "JS (JavaScript) is a high-level programming language used for creating interactive web pages and web applications. It enables dynamic behavior on websites and allows users to interact with web pages."
+    },
+    "react": {
+      "title": "React.js/React Native",
+      "text": "React is a JavaScript library for building user interfaces that simplifies the creation of interactive and efficient web applications. It is component-based, making code organized and easy to maintain."
+    },
+    "redux": {
+      "title": "Redux",
+      "text": "Redux is a state management library for JavaScript applications that simplifies data and state management by providing a centralized store. It enables predictable data handling and enforces a unidirectional data flow in the application."
+    },
+    "webpack": {
+      "title": "Webpack",
+      "text": "Webpack is a powerful JavaScript build tool used for bundling and optimizing resources in web applications, facilitating modular development and efficient asset management."
+    }
   }
 }
